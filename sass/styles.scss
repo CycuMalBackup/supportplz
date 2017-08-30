@@ -1,0 +1,106 @@
+$color-orange: #ff801a;
+$color-table: #e9e9e9;
+$color-green: #b5c409;
+$padding-food-options: 10px;
+
+.noPadding {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.container {
+  margin: 0 auto;
+}
+
+header {
+  max-height: 79px;
+  padding: 22px 0;
+  box-shadow: 0 0 2px 0 $color-table;
+  ul {
+    margin: 0;
+    display: inline;
+    padding-left: 119px;
+    position: relative;
+    li {
+      display: inline;
+      padding-left: 32px;
+    }
+  }
+  .loggedIn {
+    float: right;
+    position: relative;
+    top: -6px;
+    img, span {
+      padding-left: 10px;
+      font-size: 15px;
+    }
+  }
+}
+
+#timetable {
+  padding: 33px 0;
+
+
+  .progressBar {
+    span {
+      font-size: 7px;
+    }
+  }
+  .week {
+    text-align: center;
+    span {
+      font-size: 35px;
+      padding: 0 42px;
+    }
+    img {
+      vertical-align: top;
+    }
+  }
+  .foodOptions {
+    span {
+      font-size: 7px;
+      padding-left: $padding-food-options;
+    }
+    ul {
+      display: flex;
+      list-style-type: none;
+      padding: 0;
+      li {
+        padding-left: $padding-food-options;
+      }
+    }
+  }
+
+}
+
+#mealPlan {
+  table, tr, th, td {
+    border: 2px solid $color-table;
+    text-align: center;
+  }
+}
+
+//th {
+//  width: 126px;
+//  height: 50px;
+//}
+//td {
+//  width: 126px;
+//  height: 90px;
+//}
+
+.time {
+  width: 85px;
+}
+
+.guiltFreeDay {
+  img {
+    display: block;
+    margin: auto;
+    padding: 10px 0;
+  }
+}
+
+#bottomBoxes {
+  display: flex;
+  flex-direction: row;
+}

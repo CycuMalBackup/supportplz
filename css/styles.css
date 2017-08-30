@@ -1,0 +1,63 @@
+.noPadding {
+  padding-left: 0 !important;
+  padding-right: 0 !important; }
+
+.container {
+  margin: 0 auto; }
+
+header {
+  max-height: 79px;
+  padding: 22px 0;
+  box-shadow: 0 0 2px 0 #e9e9e9; }
+  header ul {
+    margin: 0;
+    display: inline;
+    padding-left: 119px;
+    position: relative; }
+    header ul li {
+      display: inline;
+      padding-left: 32px; }
+  header .loggedIn {
+    float: right;
+    position: relative;
+    top: -6px; }
+    header .loggedIn img, header .loggedIn span {
+      padding-left: 10px;
+      font-size: 15px; }
+
+#timetable {
+  padding: 33px 0; }
+  #timetable .progressBar span {
+    font-size: 7px; }
+  #timetable .week {
+    text-align: center; }
+    #timetable .week span {
+      font-size: 35px;
+      padding: 0 42px; }
+    #timetable .week img {
+      vertical-align: top; }
+  #timetable .foodOptions span {
+    font-size: 7px;
+    padding-left: 10px; }
+  #timetable .foodOptions ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0; }
+    #timetable .foodOptions ul li {
+      padding-left: 10px; }
+
+#mealPlan table, #mealPlan tr, #mealPlan th, #mealPlan td {
+  border: 2px solid #e9e9e9;
+  text-align: center; }
+
+.time {
+  width: 85px; }
+
+.guiltFreeDay img {
+  display: block;
+  margin: auto;
+  padding: 10px 0; }
+
+#bottomBoxes {
+  display: flex;
+  flex-direction: row; }
