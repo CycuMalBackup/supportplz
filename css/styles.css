@@ -1,3 +1,6 @@
+.clearfix {
+  clear: both; }
+
 .noPadding {
   padding-left: 0 !important;
   padding-right: 0 !important; }
@@ -9,21 +12,23 @@ header {
   max-height: 79px;
   padding: 22px 0;
   box-shadow: 0 0 2px 0 #e9e9e9; }
-  header ul {
-    margin: 0;
-    display: inline;
-    padding-left: 119px;
-    position: relative; }
-    header ul li {
-      display: inline;
-      padding-left: 32px; }
   header .loggedIn {
-    float: right;
-    position: relative;
-    top: -6px; }
+    float: right; }
     header .loggedIn img, header .loggedIn span {
       padding-left: 10px;
       font-size: 15px; }
+  header .element-menu {
+    float: left;
+    margin-right: 32px;
+    padding-top: 10px; }
+  header .first {
+    margin-left: 150px;
+    color: #ff801a; }
+  header .line {
+    width: 25px;
+    height: 2px;
+    background: #ff801a;
+    margin-top: 8px; }
 
 #timetable {
   padding: 33px 0; }
