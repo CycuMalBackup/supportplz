@@ -42,7 +42,8 @@ header {
   #timetable .progressBar div.bar .weekItem {
     float: left; }
     #timetable .progressBar div.bar .weekItem span {
-      font-size: 7px; }
+      font-size: 7px;
+      margin-left: 12px; }
     #timetable .progressBar div.bar .weekItem .first {
       background-position: -10px 0;
       width: 10px; }
