@@ -32,8 +32,26 @@ header {
 
 #timetable {
   padding: 33px 0; }
-  #timetable .progressBar span {
-    font-size: 7px; }
+  #timetable .progressBar p {
+    font-size: 7px;
+    padding: 7px 0 0 0;
+    margin-bottom: 0; }
+  #timetable .progressBar div.bar .icon {
+    width: 20px;
+    height: 10px; }
+  #timetable .progressBar div.bar .weekItem {
+    float: left; }
+    #timetable .progressBar div.bar .weekItem span {
+      font-size: 7px; }
+    #timetable .progressBar div.bar .weekItem .first {
+      background-position: -10px 0;
+      width: 10px; }
+    #timetable .progressBar div.bar .weekItem .green {
+      background-image: url(../images/progressBar1.png); }
+    #timetable .progressBar div.bar .weekItem .white {
+      background-image: url(../images/progressBar2.png); }
+    #timetable .progressBar div.bar .weekItem .grey {
+      background-image: url(../images/progressBar3.png); }
   #timetable .week {
     text-align: center; }
     #timetable .week span {
@@ -54,6 +72,12 @@ header {
 #mealPlan table, #mealPlan tr, #mealPlan th, #mealPlan td {
   border: 2px solid #e9e9e9;
   text-align: center; }
+
+#mealPlan th {
+  width: 13%; }
+
+#mealPlan td.time {
+  width: 9%; }
 
 .time {
   width: 85px; }

@@ -6,10 +6,12 @@ $padding-food-options: 10px;
 .clearfix {
   clear: both;
 }
+
 .noPadding {
   padding-left: 0 !important;
   padding-right: 0 !important;
 }
+
 .container {
   margin: 0 auto;
 }
@@ -46,8 +48,35 @@ header {
   padding: 33px 0;
 
   .progressBar {
-    span {
+    p {
       font-size: 7px;
+      padding: 7px 0 0 0;
+      margin-bottom: 0;
+    }
+    div.bar {
+      .icon {
+        width: 20px;
+        height: 10px;
+      }
+      .weekItem {
+        float: left;
+        span {
+          font-size: 7px;
+        }
+        .first {
+          background-position: -10px 0;
+          width: 10px;
+        }
+        .green {
+          background-image: url(../images/progressBar1.png);
+        }
+        .white {
+          background-image: url(../images/progressBar2.png);
+        }
+        .grey {
+          background-image: url(../images/progressBar3.png);
+        }
+      }
     }
   }
   .week {
@@ -81,10 +110,18 @@ header {
     border: 2px solid $color-table;
     text-align: center;
   }
+  th {
+    width: 13%;
+  }
+  td.time {
+    width: 9%;
+  }
 }
+
 .time {
   width: 85px;
 }
+
 .guiltFreeDay {
   img {
     display: block;
