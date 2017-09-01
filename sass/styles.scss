@@ -9,8 +9,34 @@ $padding-food-options: 10px;
 
 header {
   max-height: 79px;
+  max-width: 978px;
+  margin: 0 auto;
   padding: 22px 0;
   box-shadow: 0 0 2px 0 $color-table;
+  .menu-margin {
+    float: left;
+    margin-left: 150px;
+    width: 1px;
+    height: 1px;
+  }
+  .menu-elements {
+    float: left;
+
+    .element-menu {
+      float: left;
+      margin-right: 32px;
+      padding-top: 10px;
+    }
+    .selected {
+      color: $color-orange;
+    }
+    .line {
+      width: 25px;
+      height: 2px;
+      background: $color-orange;
+      margin-top: 8px;
+    }
+  }
   .loggedIn {
     float: right;
     img, span {
@@ -18,35 +44,15 @@ header {
       font-size: 15px;
     }
   }
-  .element-menu {
-    float: left;
-    margin-right: 32px;
-    padding-top: 10px;
-  }
-  .first {
-    margin-left: 150px;
-    color: $color-orange;
-  }
-  .line {
-    width: 25px;
-    height: 2px;
-    background: $color-orange;
-    margin-top: 8px;
-  }
+}
+
+main {
+  max-width: 978px;
+  margin: 0 auto;
 }
 
 #timetable {
   padding: 33px 0;
-  @supports (display: -ms-grid) {
-    display: -ms-grid;
-    -ms-grid-columns: 33.3% 33.3% 33.3%;
-    -ms-grid-rows: 1fr;
-  }
-  @supports(display: grid) {
-    display: grid;
-    grid-template-columns: repeat(3, 33.3%);
-    grid-template-rows: 1fr;
-  }
 
   .progressBar {
     p {
