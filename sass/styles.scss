@@ -7,15 +7,6 @@ $padding-food-options: 10px;
   clear: both;
 }
 
-.noPadding {
-  padding-left: 0 !important;
-  padding-right: 0 !important;
-}
-
-.container {
-  margin: 0 auto;
-}
-
 header {
   max-height: 79px;
   padding: 22px 0;
@@ -46,6 +37,16 @@ header {
 
 #timetable {
   padding: 33px 0;
+  @supports (display: -ms-grid) {
+    display: -ms-grid;
+    -ms-grid-columns: 33.3% 33.3% 33.3%;
+    -ms-grid-rows: 1fr;
+  }
+  @supports(display: grid) {
+    display: grid;
+    grid-template-columns: repeat(3, 33.3%);
+    grid-template-rows: 1fr;
+  }
 
   .progressBar {
     p {
@@ -54,6 +55,7 @@ header {
       margin-bottom: 0;
     }
     div.bar {
+      -ms-grid-column: 1;
       .icon {
         width: 20px;
         height: 10px;
@@ -63,6 +65,9 @@ header {
         span {
           font-size: 7px;
           margin-left: 12px;
+        }
+        .firstSpan {
+          margin-left: 3px;
         }
         .first {
           background-position: -10px 0;
@@ -81,7 +86,18 @@ header {
     }
   }
   .week {
+    -ms-grid-column: 2;
     text-align: center;
+    position: relative;
+    div.weekContent {
+      vertical-align: middle;
+      position: absolute;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+    }
     span {
       font-size: 35px;
       padding: 0 42px;
@@ -91,6 +107,10 @@ header {
     }
   }
   .foodOptions {
+    -ms-grid-column: 3;
+    div.foodOptionsContent {
+      float: right;
+    }
     span {
       font-size: 7px;
       padding-left: $padding-food-options;
@@ -110,6 +130,7 @@ header {
   table, tr, th, td {
     border: 2px solid $color-table;
     text-align: center;
+    border-collapse: collapse;
   }
   th {
     width: 13%;
