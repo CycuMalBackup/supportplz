@@ -1,0 +1,28 @@
+{
+    "mealPlan": [
+          {
+              "weekDay" : "1",
+              "dietType" : "LOW CARB",
+              "workout" : "true",
+              "meals" : [
+                  {"hours" : "6:00", "meal" : "Bod•ē Shake", "eaten" : "true" },
+                  {"hours" : "9:00", "meal" : "Ham and Swiss Roll Ups ", "eaten" : "true" },
+                  {"hours" : "12:00", "meal" : "Turkey Melt", "eaten" : "true" },
+                  {"hours" : "15:00", "meal" : "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten" : "true" },
+                  {"hours" : "18:00", "meal" : "Turkey Melt", "eaten" : "false" }
+              ]
+          },
+          {
+            "weekDay" : "2",
+            "dietType" : "LOW CARB",
+            "workout" : "true",
+            "meals" : [
+                {"hours" : "6:00", "meal" : "Bod•ē Shake", "eaten" : "false" },
+                {"hours" : "9:00", "meal" : "Ham and Swiss Roll Ups ", "eaten" : "false" },
+                {"hours" : "12:00", "meal" : "Turkey Melt", "eaten" : "false" },
+                {"hours" : "15:00", "meal" : "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten" : "false" },
+                {"hours" : "18:00", "meal" : "Turkey Melt", "eaten" : "false" }
+            ]
+        }
+    ]
+}
