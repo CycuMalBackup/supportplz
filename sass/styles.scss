@@ -1,3 +1,4 @@
+$small-device-max-width: 768px;
 $color-orange: #ff801a;
 $color-table: #e9e9e9;
 $color-green: #b5c409;
@@ -7,10 +8,14 @@ $padding-food-options: 10px;
   clear: both;
 }
 
-header {
-  max-height: 79px;
+.container {
   max-width: 978px;
   margin: 0 auto;
+  padding: 0px 10px;
+}
+
+header {
+  max-height: 79px;
   padding: 22px 0;
   box-shadow: 0 0 2px 0 $color-table;
   .menu-margin {
@@ -44,11 +49,6 @@ header {
       font-size: 15px;
     }
   }
-}
-
-main {
-  max-width: 978px;
-  margin: 0 auto;
 }
 
 #timetable {
@@ -91,24 +91,21 @@ main {
     }
   }
   .week {
-    -ms-grid-column: 2;
     text-align: center;
-    div.weekContent {
-      vertical-align: middle;
-
-    }
     span {
       font-size: 35px;
       padding: 0 42px;
-    }
-    img {
-      vertical-align: top;
+      white-space: nowrap;
     }
   }
   .foodOptions {
-    -ms-grid-column: 3;
     div.foodOptionsContent {
       float: right;
+    }
+    @media (max-width: $small-device-max-width) {
+      div.foodOptionsContent {
+        float: left;
+      }
     }
     p {
       font-size: 7px;

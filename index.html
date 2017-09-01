@@ -5,225 +5,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Get Response Task</title>
-    <link rel="stylesheet" href="css/styles.css">
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
-    <header>
-        <div class="menu-margin hidden-sm-down"></div>
-        <div class="menu-elements">
-            <div class="element-menu selected">
-                <div>DASHBOARD</div>
-                <div class="line"></div>
+    <div class="container">
+        <header>
+            <div class="menu-margin hidden-sm-down"></div>
+            <div class="menu-elements">
+                <div class="element-menu selected">
+                    <div>DASHBOARD</div>
+                    <div class="line"></div>
+                </div>
+                <div class="element-menu">
+                    <div>RECIPES</div>
+                </div>
+                <div class="element-menu">
+                    <div>CHALLENGE</div>
+                </div>
             </div>
-            <div class="element-menu">
-                <div>RECIPES</div>
+            <div class="loggedIn">
+                <img src="./images/headerPhoto.png" alt="photo">
+                <span>Olivia Wilde</span>
+                <img src="./images/headerArrowDown.png" alt="arrow_down">
             </div>
-            <div class="element-menu">
-                <div>CHALLENGE</div>
-            </div>
-        </div>
-        <div class="loggedIn">
-            <img src="./images/headerPhoto.png" alt="photo">
-            <span>Olivia Wilde</span>
-            <img src="./images/headerArrowDown.png" alt="arrow_down">
-        </div>
-        <div class="clearfix"></div>
-    </header>
+            <div class="clearfix"></div>
+        </header>
 
-    <main>
-        <section id="timetable">
-            <div class="row">
-                <div class="col-sm-4 progressBar">
-                    <p>YOUR 12 WEEK PROGRESS</p>
-                    <div class="bar">
-                        <div class="weekItem">
-                            <div class="first green icon"></div>
-                            <span class="firstSpan">1</span></div>
-                        <div class="weekItem">
-                            <div class="green icon"></div>
-                            <span>2</span></div>
-                        <div class="weekItem">
-                            <div class="green icon"></div>
-                            <span>3</span></div>
-                        <div class="weekItem">
-                            <div class="green icon"></div>
-                            <span>4</span></div>
-                        <div class="weekItem">
-                            <div class="green icon"></div>
-                            <span>5</span></div>
-                        <div class="weekItem">
-                            <div class="green icon"></div>
-                            <span>6</span></div>
-                        <div class="weekItem">
-                            <div class="white icon"></div>
-                            <span>7</span></div>
-                        <div class="weekItem">
-                            <div class="grey icon"></div>
-                            <span>8</span></div>
-                        <div class="weekItem">
-                            <div class="grey icon"></div>
-                            <span>9</span></div>
-                        <div class="weekItem">
-                            <div class="grey icon"></div>
-                            <span>10</span></div>
-                        <div class="weekItem">
-                            <div class="grey icon"></div>
-                            <span>11</span></div>
-                        <div class="weekItem">
-                            <div class="grey icon"></div>
-                            <span>12</span></div>
+        <main>
+            <section id="timetable">
+                <div class="row">
+                    <div class="col-sm-4 progressBar">
+                        <p>YOUR 12 WEEK PROGRESS</p>
+                        <div class="bar">
+                            <div class="weekItem">
+                                <div class="first green icon"></div>
+                                <span class="firstSpan">1</span></div>
+                            <div class="weekItem">
+                                <div class="green icon"></div>
+                                <span>2</span></div>
+                            <div class="weekItem">
+                                <div class="green icon"></div>
+                                <span>3</span></div>
+                            <div class="weekItem">
+                                <div class="green icon"></div>
+                                <span>4</span></div>
+                            <div class="weekItem">
+                                <div class="green icon"></div>
+                                <span>5</span></div>
+                            <div class="weekItem">
+                                <div class="green icon"></div>
+                                <span>6</span></div>
+                            <div class="weekItem">
+                                <div class="white icon"></div>
+                                <span>7</span></div>
+                            <div class="weekItem">
+                                <div class="grey icon"></div>
+                                <span>8</span></div>
+                            <div class="weekItem">
+                                <div class="grey icon"></div>
+                                <span>9</span></div>
+                            <div class="weekItem">
+                                <div class="grey icon"></div>
+                                <span>10</span></div>
+                            <div class="weekItem">
+                                <div class="grey icon"></div>
+                                <span>11</span></div>
+                            <div class="weekItem">
+                                <div class="grey icon"></div>
+                                <span>12</span></div>
+                        </div>
+                        <div class="clearfix"></div>
                     </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="col-sm-4 week">
-                    <div class="weekContent">
-                        <img src="./images/prevWeek.png" alt="backwardArrow">
-                        <span>Week 7</span>
-                        <img src="./images/nextWeek.png" alt="forwardArrow">
+                    <div class="col-sm-4 week">
+                        <table>
+                            <tr>
+                                <td><img src="./images/prevWeek.png" alt="backwardArrow"></td>
+                                <td><span>Week 7</span></td>
+                                <td><img src="./images/nextWeek.png" alt="forwardArrow"></td>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="col-sm-4 foodOptions">
-                    <div class="foodOptionsContent">
-                        <p>SELECT YOUR PROTEIN OPTIONS</p>
-                        <ul>
-                            <li><img src="./images/food1.png" alt="vege"></li>
-                            <li><img src="./images/food2.png" alt="cheese"></li>
-                            <li><img src="./images/food3.png" alt="steak"></li>
-                            <li><img src="./images/food4.png" alt="fish"></li>
-                            <li><img src="./images/food5.png" alt="chicken"></li>
-                        </ul>
+                    <div class="col-sm-4 foodOptions">
+                        <div class="foodOptionsContent">
+                            <p>SELECT YOUR PROTEIN OPTIONS</p>
+                            <ul>
+                                <li><img src="./images/food1.png" alt="vege"></li>
+                                <li><img src="./images/food2.png" alt="cheese"></li>
+                                <li><img src="./images/food3.png" alt="steak"></li>
+                                <li><img src="./images/food4.png" alt="fish"></li>
+                                <li><img src="./images/food5.png" alt="chicken"></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
 
-        <section id="mealPlan">
-            <div style="overflow-x:auto;">
-                <table>
-                    <tr>
-                        <th></th>
-                        <th>DAY 64</th>
-                        <th class="currentDay">DAY 65</th>
-                        <th>DAY 66</th>
-                        <th>DAY 67</th>
-                        <th>DAY 68</th>
-                        <th>DAY 69</th>
-                        <th>DAY 70</th>
-                    </tr>
-                    <tr>
-                        <td class="time">6:00 AM</td>
-                        <td><span>Bod•ē Shake</span><img src="./images/mealEaten.png" alt="tick">
-                            <img src="./images/shake.png" alt="shake">
-                        </td>
-                        <td><span>Bod•ē Shake</span><img src="./images/todaysShake.png" alt="shake"></td>
-                        <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
-                        <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
-                        <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
-                        <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
-                        <td class="guiltFreeDay" rowspan="5"><img src="./images/getresponse_task%5B1%5D%5B1%5D_59.png" alt="guilt_free_day">
-                            <img src="./images/smile.png" alt="smile">
-                        </td>
-                    </tr>
-                    <tr>
-                        <td class="time">9:00 AM</td>
-                        <td><span>Ham and Swiss Roll Ups</span>
-                            <img src="./images/mealEaten.png" alt="tick">
-                        </td>
-                        <td><span>Ham and Swiss Roll Ups</span></td>
-                        <td><span>Grilled Steak (HC)</span></td>
-                        <td><span>Ham and Swiss Roll Ups</span></td>
-                        <td><span>Ham and Swiss Roll Ups</span></td>
-                        <td><span>Grilled Steak (HC)</span></td>
-                    </tr>
-                    <tr>
-                        <td class="time">12:00 PM</td>
-                        <td><span>Turkey Melt</span><img src="./images/mealEaten.png" alt="tick"></td>
-                        <td><span>Turkey Melt</span></td>
-                        <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
-                        <td><span>Turkey Melt</span></td>
-                        <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
-                        <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
-                    </tr>
-                    <tr>
-                        <td class="time">3:00 PM</td>
-                        <td><span>Bod•ē Burn with Mozzarella and Tomato Slices</span>
-                            <img src="./images/mealEaten.png" alt="tick">
-                        </td>
-                        <td><span>Bod•ē Burn with Mozzarella and Tomato Slices</span></td>
-                        <td><span>Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray</span></td>
-                        <td><span>Bod•ē Burn with Mozzarella and Tomato Slices</span></td>
-                        <td><span>Bod•ē Burn with Mozzarella and Tomato Slices</span></td>
-                        <td><span>Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray</span></td>
-                    </tr>
-                    <tr>
-                        <td class="time">6:00 PM</td>
-                        <td><span>Turkey Melt</span></td>
-                        <td><span>Turkey Melt</span></td>
-                        <td><span>Garlic Lime Chicken (HC)</span></td>
-                        <td><span>Turkey Melt</span></td>
-                        <td><span>Turkey Melt</span></td>
-                        <td><span>Garlic Lime Chicken (HC)</span></td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td><span>LOW-CARB</span></td>
-                        <td><span>LOW-CARB</span></td>
-                        <td><span>HIGH-CARB</span></td>
-                        <td><span>LOW-CARB</span></td>
-                        <td><span>LOW-CARB</span></td>
-                        <td><span>HIGH-CARB</span></td>
-                        <td rowspan="2"><img src="./images/print.png" alt="print"><span>Print</span></td>
-                    </tr>
-                    <tr>
-                        <td class="time"><span>Workout</span>
-                            <img src="./images/workoutArrow.png" alt="arrow">
-                        </td>
-                        <td><img src="./images/workoutDone.png" alt="workout_done">
-                            <img src="./images/workoutDoneTick.png" alt="tick">
-                        </td>
-                        <td><img src="./images/workoutDone.png" alt="workout_done">
-                            <img src="./images/workoutDoneTick.png" alt="tick">
-                        </td>
-                        <td><img src="./images/workout.png" alt="workout_to_do"></td>
-                        <td><img src="./images/workout.png" alt="workout_to_do"></td>
-                        <td><img src="./images/workout.png" alt="workout_to_do"></td>
-                        <td><img src="./images/workout.png" alt="workout_to_do"></td>
-                    </tr>
-                </table>
-            </div>
-        </section>
+            <section id="mealPlan">
+                <div style="overflow-x:auto;">
+                    <table>
+                        <tr>
+                            <th></th>
+                            <th>DAY 64</th>
+                            <th class="currentDay">DAY 65</th>
+                            <th>DAY 66</th>
+                            <th>DAY 67</th>
+                            <th>DAY 68</th>
+                            <th>DAY 69</th>
+                            <th>DAY 70</th>
+                        </tr>
+                        <tr>
+                            <td class="time">6:00 AM</td>
+                            <td><span>Bod•ē Shake</span><img src="./images/mealEaten.png" alt="tick">
+                                <img src="./images/shake.png" alt="shake">
+                            </td>
+                            <td><span>Bod•ē Shake</span><img src="./images/todaysShake.png" alt="shake"></td>
+                            <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
+                            <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
+                            <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
+                            <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
+                            <td class="guiltFreeDay" rowspan="5"><img src="./images/getresponse_task%5B1%5D%5B1%5D_59.png" alt="guilt_free_day">
+                                <img src="./images/smile.png" alt="smile">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="time">9:00 AM</td>
+                            <td><span>Ham and Swiss Roll Ups</span>
+                                <img src="./images/mealEaten.png" alt="tick">
+                            </td>
+                            <td><span>Ham and Swiss Roll Ups</span></td>
+                            <td><span>Grilled Steak (HC)</span></td>
+                            <td><span>Ham and Swiss Roll Ups</span></td>
+                            <td><span>Ham and Swiss Roll Ups</span></td>
+                            <td><span>Grilled Steak (HC)</span></td>
+                        </tr>
+                        <tr>
+                            <td class="time">12:00 PM</td>
+                            <td><span>Turkey Melt</span><img src="./images/mealEaten.png" alt="tick"></td>
+                            <td><span>Turkey Melt</span></td>
+                            <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
+                            <td><span>Turkey Melt</span></td>
+                            <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
+                            <td><span>Bod•ē Shake</span><img src="./images/shake.png" alt="shake"></td>
+                        </tr>
+                        <tr>
+                            <td class="time">3:00 PM</td>
+                            <td><span>Bod•ē Burn with Mozzarella and Tomato Slices</span>
+                                <img src="./images/mealEaten.png" alt="tick">
+                            </td>
+                            <td><span>Bod•ē Burn with Mozzarella and Tomato Slices</span></td>
+                            <td><span>Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray</span></td>
+                            <td><span>Bod•ē Burn with Mozzarella and Tomato Slices</span></td>
+                            <td><span>Bod•ē Burn with Mozzarella and Tomato Slices</span></td>
+                            <td><span>Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray</span></td>
+                        </tr>
+                        <tr>
+                            <td class="time">6:00 PM</td>
+                            <td><span>Turkey Melt</span></td>
+                            <td><span>Turkey Melt</span></td>
+                            <td><span>Garlic Lime Chicken (HC)</span></td>
+                            <td><span>Turkey Melt</span></td>
+                            <td><span>Turkey Melt</span></td>
+                            <td><span>Garlic Lime Chicken (HC)</span></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td><span>LOW-CARB</span></td>
+                            <td><span>LOW-CARB</span></td>
+                            <td><span>HIGH-CARB</span></td>
+                            <td><span>LOW-CARB</span></td>
+                            <td><span>LOW-CARB</span></td>
+                            <td><span>HIGH-CARB</span></td>
+                            <td rowspan="2"><img src="./images/print.png" alt="print"><span>Print</span></td>
+                        </tr>
+                        <tr>
+                            <td class="time"><span>Workout</span>
+                                <img src="./images/workoutArrow.png" alt="arrow">
+                            </td>
+                            <td><img src="./images/workoutDone.png" alt="workout_done">
+                                <img src="./images/workoutDoneTick.png" alt="tick">
+                            </td>
+                            <td><img src="./images/workoutDone.png" alt="workout_done">
+                                <img src="./images/workoutDoneTick.png" alt="tick">
+                            </td>
+                            <td><img src="./images/workout.png" alt="workout_to_do"></td>
+                            <td><img src="./images/workout.png" alt="workout_to_do"></td>
+                            <td><img src="./images/workout.png" alt="workout_to_do"></td>
+                            <td><img src="./images/workout.png" alt="workout_to_do"></td>
+                        </tr>
+                    </table>
+                </div>
+            </section>
 
-        <section id="bottomBoxes">
-            <div class="row">
-                <div class="col-sm-4 buyNow">
-                    <h1>Running out of products?</h1>
-                    <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
-                    <button>Buy now<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
+            <section id="bottomBoxes">
+                <div class="row">
+                    <div class="col-sm-4 buyNow">
+                        <h1>Running out of products?</h1>
+                        <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
+                        <button>Buy now<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
+                    </div>
+                    <div class="col-sm-4 trainer">
+                        <h1>Bod•e Trainer in your pocket</h1>
+                        <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
+                        <button>
+                            <img src="./images/ios.png" alt="apple">iOS
+                            <img src="./images/bottomButtonsArrow.png" alt="arrow">
+                        </button>
+                        <button><img src="./images/android.png" alt="android">
+                            Android
+                            <img src="./images/bottomButtonsArrow.png" alt="arrow">
+                        </button>
+                    </div>
+                    <div class="col-sm-4 faq">
+                        <h1>Frequently Asked Questions</h1>
+                        <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
+                        <button>Read FAQs<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
+                    </div>
                 </div>
-                <div class="col-sm-4 trainer">
-                    <h1>Bod•e Trainer in your pocket</h1>
-                    <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
-                    <button>
-                        <img src="./images/ios.png" alt="apple">iOS
-                        <img src="./images/bottomButtonsArrow.png" alt="arrow">
-                    </button>
-                    <button><img src="./images/android.png" alt="android">
-                        Android
-                        <img src="./images/bottomButtonsArrow.png" alt="arrow">
-                    </button>
-                </div>
-                <div class="col-sm-4 faq">
-                    <h1>Frequently Asked Questions</h1>
-                    <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
-                    <button>Read FAQs<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
-                </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
 </body>
 
 </html>
