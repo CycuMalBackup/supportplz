@@ -37,8 +37,7 @@ header {
       grid-template-rows: 1fr; } }
   #timetable .progressBar p {
     font-size: 7px;
-    padding: 7px 0 0 0;
-    margin-bottom: 0; }
+    margin: 0 0 12px 0; }
   #timetable .progressBar div.bar {
     -ms-grid-column: 1; }
     #timetable .progressBar div.bar .icon {
@@ -62,15 +61,9 @@ header {
         background-image: url(../images/progressBar3.png); }
   #timetable .week {
     -ms-grid-column: 2;
-    text-align: center;
-    position: relative; }
+    text-align: center; }
     #timetable .week div.weekContent {
-      vertical-align: middle;
-      position: absolute;
-      width: 100%;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%); }
+      vertical-align: middle; }
     #timetable .week span {
       font-size: 35px;
       padding: 0 42px; }
@@ -80,13 +73,15 @@ header {
     -ms-grid-column: 3; }
     #timetable .foodOptions div.foodOptionsContent {
       float: right; }
-    #timetable .foodOptions span {
+    #timetable .foodOptions p {
       font-size: 7px;
+      margin: 0 0 12px 0;
       padding-left: 10px; }
     #timetable .foodOptions ul {
       display: flex;
       list-style-type: none;
-      padding: 0; }
+      padding: 0;
+      margin: 0; }
       #timetable .foodOptions ul li {
         padding-left: 10px; }
 
