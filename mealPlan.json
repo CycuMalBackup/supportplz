@@ -4,6 +4,7 @@
               "weekDay" : "1",
               "dietType" : "LOW CARB",
               "workout" : "true",
+              "isGuiltFreeDay" : "false",
               "meals" : [
                   {"hours" : "6:00", "meal" : "Bod•ē Shake", "eaten" : "true" },
                   {"hours" : "9:00", "meal" : "Ham and Swiss Roll Ups ", "eaten" : "true" },
@@ -16,6 +17,7 @@
             "weekDay" : "2",
             "dietType" : "LOW CARB",
             "workout" : "true",
+            "isGuiltFreeDay" : "false",
             "meals" : [
                 {"hours" : "6:00", "meal" : "Bod•ē Shake", "eaten" : "false" },
                 {"hours" : "9:00", "meal" : "Ham and Swiss Roll Ups ", "eaten" : "false" },
