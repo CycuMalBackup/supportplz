@@ -6,10 +6,12 @@ $padding-food-options: 10px;
 .clearfix {
   clear: both;
 }
+.noPadding {
+  padding: 0;
+}
 
 header {
   max-height: 79px;
-  max-width: 978px;
   margin: 0 auto;
   padding: 22px 0;
   box-shadow: 0 0 2px 0 $color-table;
@@ -33,7 +35,6 @@ header {
     .line {
       width: 25px;
       height: 2px;
-      background: $color-orange;
       margin-top: 8px;
     }
   }
@@ -46,14 +47,8 @@ header {
   }
 }
 
-main {
-  max-width: 978px;
-  margin: 0 auto;
-}
-
 #timetable {
   padding: 33px 0;
-
   .progressBar {
     p {
       font-size: 7px;
@@ -95,7 +90,6 @@ main {
     text-align: center;
     div.weekContent {
       vertical-align: middle;
-
     }
     span {
       font-size: 35px;
@@ -136,11 +130,10 @@ main {
   th {
     width: 13%;
   }
-  td.time {
+  th:first-child {
     width: 9%;
   }
 }
-
 .time {
   width: 85px;
 }
