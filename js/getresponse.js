@@ -1,16 +1,17 @@
 window.onload = function () {
-    const maxWeek = 12;
-    var currentWeek = 5;
-    var previousWeekButton = document.getElementsByClassName('js-week-previous')[0];
-    var nextWeekButton = document.getElementsByClassName('js-week-next')[0];
+    const maxWeek = 12,
+          disabledClass = 'disabled';
+    var currentWeek = 5,
+        previousWeekButton = document.getElementsByClassName('js-week-previous')[0],
+        nextWeekButton = document.getElementsByClassName('js-week-next')[0];
 
     var updateWeekButtons = function () {
-        const disabledClass = 'disabled';
+   
         if (currentWeek <= 1) {
             previousWeekButton.classList.add(disabledClass);
         }
-        else if (currentWeek >= 12) {
-            nextWeekButton.classList.add(disabledClass);
+        else if (currentWeek >= maxWeek) {
+            nextWeekButton.classList.add(disabledClass);``
         } else {
             previousWeekButton.classList.remove(disabledClass);
             nextWeekButton.classList.remove(disabledClass);
