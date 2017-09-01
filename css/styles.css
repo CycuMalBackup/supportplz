@@ -62,10 +62,17 @@ header {
         background-image: url(../images/progressBar3.png); }
   #timetable .week {
     text-align: center; }
-    #timetable .week span {
+    #timetable .week table td {
+      min-width: 26px; }
+    #timetable .week div.week-current {
       font-size: 35px;
+      min-width: 230px;
       padding: 0 42px;
       white-space: nowrap; }
+    #timetable .week img {
+      cursor: pointer; }
+    #timetable .week img.disabled {
+      display: none; }
   #timetable .foodOptions div.foodOptionsContent {
     float: right; }
   @media (max-width: 768px) {

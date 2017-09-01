@@ -92,10 +92,22 @@ header {
   }
   .week {
     text-align: center;
-    span {
+    table {
+      td{
+        min-width: 26px;
+      }
+    }
+    div.week-current {
       font-size: 35px;
+      min-width: 230px;
       padding: 0 42px;
       white-space: nowrap;
+    }
+    img {
+      cursor: pointer;
+    }
+    img.disabled {
+      display: none;
     }
   }
   .foodOptions {
