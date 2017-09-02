@@ -8,7 +8,7 @@ window.onload = function () {
 
     var buildTable = function () {
         var tableHtml = "<table>";
-        tableHtml += getTableHeader(1);
+        tableHtml += getTableHeader(getFirstDayOfTheWeek());
         tableHtml += getMeals();
         tableHtml += getDietType();
         tableHtml += getWorkoutData();
@@ -22,16 +22,16 @@ window.onload = function () {
         tablePlaceHolder.innerHTML = tableDisplayed;
     };
 
-    var getTableHeader = function (dayNumber) {
+    var getTableHeader = function (firstDayOfTheWeek) {
         var tableHeader = "<tr>";
         tableHeader += "<th></th>";
-        tableHeader += "<th>DAY <span class=\"week-day-number\">" + dayNumber++ + "</span></th>";
-        tableHeader += "<th>DAY <span class=\"week-day-number\">" + dayNumber++ + "</span></th>";
-        tableHeader += "<th>DAY <span class=\"week-day-number\">" + dayNumber++ + "</span></th>";
-        tableHeader += "<th>DAY <span class=\"week-day-number\">" + dayNumber++ + "</span></th>";
-        tableHeader += "<th>DAY <span class=\"week-day-number\">" + dayNumber++ + "</span></th>";
-        tableHeader += "<th>DAY <span class=\"week-day-number\">" + dayNumber++ + "</span></th>";
-        tableHeader += "<th>DAY <span class=\"week-day-number\">" + dayNumber++ + "</span></th>";
+        tableHeader += "<th class='tableHeaderDay'>DAY <span class=\"week-day-number\">" + firstDayOfTheWeek++ + "</span></th>";
+        tableHeader += "<th class='tableHeaderDay'>DAY <span class=\"week-day-number\">" + firstDayOfTheWeek++ + "</span></th>";
+        tableHeader += "<th class='tableHeaderDay'>DAY <span class=\"week-day-number\">" + firstDayOfTheWeek++ + "</span></th>";
+        tableHeader += "<th class='tableHeaderDay'>DAY <span class=\"week-day-number\">" + firstDayOfTheWeek++ + "</span></th>";
+        tableHeader += "<th class='tableHeaderDay'>DAY <span class=\"week-day-number\">" + firstDayOfTheWeek++ + "</span></th>";
+        tableHeader += "<th class='tableHeaderDay'>DAY <span class=\"week-day-number\">" + firstDayOfTheWeek++ + "</span></th>";
+        tableHeader += "<th class='tableHeaderDay'>DAY <span class=\"week-day-number\">" + firstDayOfTheWeek++ + "</span></th>";
         tableHeader += "</tr>";
         return tableHeader;
     };
@@ -66,8 +66,8 @@ window.onload = function () {
             wasEaten = hourSpecificMeal.eaten,
             mealName = hourSpecificMeal.meal;
 
-        var mealHtml = "<td>";
-        mealHtml += mealName;
+        var mealHtml = "<td><div class='cellDataContainer'>";
+        mealHtml += "<span class='cellDataMeal'>" + mealName + "</span>";
         if (wasEaten === "true") {
             mealHtml += "<img class='was-eaten' src='./images/mealEaten.png' alt='tick'>";
         }
@@ -79,7 +79,7 @@ window.onload = function () {
                 mealHtml += "<img src=\"./images/shake.png\" alt=\"shake\">";
             }
         }
-        mealHtml += "</td>";
+        mealHtml += "</div></td>";
         return mealHtml;
     };
 
@@ -94,7 +94,7 @@ window.onload = function () {
                 dietType += "<td>" + dailyMealPlan.dietType + "</td>";
             }
         }
-        dietType += "</tr>"
+        dietType += "</tr>";
         return dietType;
     };
 
@@ -104,8 +104,21 @@ window.onload = function () {
         for (var i = 0; i < mealPlan.length; i++) {
             var dailyWorkout = mealPlan[i];
             if(dailyWorkout.dietType !== guiltFree){
-                workout += "<td>" + dailyWorkout.workoutToDo + "</td>";
-            };
+                if(dailyWorkout.workoutToDo === "true" && dailyWorkout.workoutDone === "true") {
+                    workout +=
+                        "<td>" +
+                        "<img src='./images/workoutDone.png' alt='workoutDone'>" +
+                        "<img src='./images/workoutDoneTick.png' alt='tick'>" +
+                        "</td>";
+                } else if (dailyWorkout.workoutToDo === "true" && dailyWorkout.workoutDone === "false") {
+                    workout +=
+                        "<td>" +
+                        "<img src='./images/workout.png' alt='workoutToDo'>" +
+                        "</td>";
+                } else {
+                    workout += "<td>" + dailyWorkout.workoutToDo + "</td>";
+                }
+            }
         }
         workout += "</tr>";
         return workout;
@@ -115,7 +128,6 @@ window.onload = function () {
         var guiltFreeDay =
             "<td class=\"guiltFreeDay\" rowspan=\"5\"><img src=\"./images/guiltfreeday.png\" alt=\"guilt_free_day\">" +
             "<img src=\"./images/smile.png\" alt=\"smile\"></td>";
-        console.log("in get guilt free");
         return guiltFreeDay;
     };
 
@@ -134,7 +146,15 @@ window.onload = function () {
     var updateCurrentWeek = function () {
         var weekCurrent = document.getElementsByClassName('js-week-current')[0];
         weekCurrent.innerText = 'Week ' + currentWeek;
+        var weekDays = document.getElementsByClassName('week-day-number');
+        for (var i = 0; i < weekDays.length; i++) {
+            var day = weekDays[i];
+            day.innerText = getFirstDayOfTheWeek() + i;
+        }
         updateWeekButtons();
+    };
+    var getFirstDayOfTheWeek = function () {
+        return (currentWeek - 1) * 7 + 1;
     };
 
     updateCurrentWeek();
@@ -152,6 +172,12 @@ window.onload = function () {
         }
     };
     displayTable();
+
+//     var updateTableHeaders = function () {
+// previousWeekButton.onclick =
+//     console.log('dupa');
+//     };
+//     updateTableHeaders();
 };
 
 var mealPlan = [
