@@ -11,7 +11,7 @@ window.onload = function () {
             previousWeekButton.classList.add(disabledClass);
         }
         else if (currentWeek >= maxWeek) {
-            nextWeekButton.classList.add(disabledClass);``
+            nextWeekButton.classList.add(disabledClass);
         } else {
             previousWeekButton.classList.remove(disabledClass);
             nextWeekButton.classList.remove(disabledClass);
