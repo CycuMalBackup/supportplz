@@ -62,10 +62,17 @@ header {
         background-image: url(../images/progressBar3.png); }
   #timetable .week {
     text-align: center; }
-    #timetable .week span {
+    #timetable .week table td {
+      min-width: 26px; }
+    #timetable .week div.week-current {
       font-size: 35px;
+      min-width: 230px;
       padding: 0 42px;
       white-space: nowrap; }
+    #timetable .week img {
+      cursor: pointer; }
+    #timetable .week img.disabled {
+      display: none; }
   #timetable .foodOptions div.foodOptionsContent {
     float: right; }
   @media (max-width: 768px) {
@@ -84,15 +91,55 @@ header {
       padding-left: 10px; }
 
 #mealPlan table, #mealPlan tr, #mealPlan th, #mealPlan td {
-  border: 2px solid #e9e9e9;
-  text-align: center;
-  border-collapse: collapse; }
+  border-collapse: collapse;
+  text-align: center; }
+
+#mealPlan th, #mealPlan td {
+  border-top: 2px solid #e9e9e9;
+  border-right: 2px solid #e9e9e9; }
 
 #mealPlan th {
   width: 13%; }
 
-#mealPlan td.time {
+#mealPlan th:first-child {
   width: 9%; }
+
+#mealPlan tr:first-child > th,
+#mealPlan tr:first-child > td {
+  border-top: 0px; }
+
+#mealPlan tr > th:first-child,
+#mealPlan tr > td:first-child {
+  border-right: 0px; }
+
+#mealPlan tr > th:last-child,
+#mealPlan tr > td:last-child {
+  border-right: 0px;
+  border-left: 2px solid #e9e9e9; }
+
+#mealPlan tr > th:first-child,
+#mealPlan tr > td:first-child,
+#mealPlan tr:last-child > td,
+#mealPlan tr:nth-last-child(2) > td {
+  background: url("../images/table_background.png") repeat; }
+
+#mealPlan tr:nth-last-child(2) > td {
+  border-top: 0px; }
+
+#mealPlan tr:nth-last-child(2) > td:first-child {
+  border-right: 0px; }
+
+#mealPlan tr > td.selectedYesterday,
+#mealPlan tr > th.selectedYesterday,
+#mealPlan tr > td.selected,
+#mealPlan tr > th.selected {
+  border-right-color: red; }
+
+#mealPlan tr > th.selected {
+  border-top: 2px solid red; }
+
+#mealPlan tr:last-child > td.selected {
+  border-bottom: 2px solid red; }
 
 .time {
   width: 85px; }
