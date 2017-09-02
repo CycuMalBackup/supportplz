@@ -101,6 +101,8 @@ header {
 
 #mealPlan th {
   width: 13%; }
+  #mealPlan th .tableHeaderDay {
+    color: #adbb0c; }
 
 #mealPlan th:first-child {
   width: 9%; }
