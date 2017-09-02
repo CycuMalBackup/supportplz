@@ -13,7 +13,11 @@ window.onload = function () {
         tableHtml += "</table>";
 return tableHtml;
     };
-
+var displayTable = function () {
+  var tableDisplayed = buildTable();
+  var tablePlaceHolder = document.getElementsByClassName("tablePlaceHolder")[0];
+  tablePlaceHolder.innerHTML = tableDisplayed;
+};
 
     var getDailyMealPlan = function () {
         var dailyMealPlanHtml = "";
@@ -107,7 +111,7 @@ return tableHtml;
             updateCurrentWeek();
         }
     };
-    console.log(buildTable());
+    displayTable();
 };
 
 var mealPlan = [
