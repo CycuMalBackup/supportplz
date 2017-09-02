@@ -27,7 +27,8 @@ header {
       width: 25px;
       height: 2px;
       background: #ff801a;
-      margin-top: 8px; }
+      margin-top: 8px;
+      color: #ff801a; }
   header .loggedIn {
     float: right; }
     header .loggedIn img, header .loggedIn span {
