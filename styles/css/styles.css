@@ -116,10 +116,8 @@ header {
       #timetable .week {
         float: left; } }
     #timetable .week div.week-current {
-      font-size: 35px;
+      font-size: 44px;
       min-width: 230px;
-      padding: 0 42px;
-      white-space: nowrap;
       text-align: center; }
     #timetable .week img {
       cursor: pointer; }
@@ -159,6 +157,36 @@ header {
       padding-left: 0; }
     #timetable .foodOptions ul li {
       padding-left: 10px; }
+
+#mealPlan .tablePlaceHolder {
+  overflow-x: auto; }
+  #mealPlan .tablePlaceHolder span.timeTable {
+    color: #828282;
+    font-size: 11px;
+    font-weight: bold; }
+  #mealPlan .tablePlaceHolder .tableHeaderDay {
+    font-size: 17px;
+    color: #adbb0c;
+    padding: 17px 0; }
+  #mealPlan .tablePlaceHolder td.meal-cell {
+    position: relative; }
+    #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer {
+      height: 90px;
+      margin: 13px 23px 0 13px;
+      text-align: left; }
+      #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer span.cellDataMeal {
+        font-size: 13px;
+        line-height: 1.4;
+        padding-right: 10px;
+        font-family: arial;
+        color: #828282;
+        text-align: left; }
+      #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer img.was-eaten {
+        position: absolute;
+        top: 13px;
+        right: 8px; }
+      #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer img.shakePicture {
+        margin: 16px 0 0 8px; }
 
 #mealPlan table, #mealPlan tr, #mealPlan th, #mealPlan td {
   border-collapse: collapse;
