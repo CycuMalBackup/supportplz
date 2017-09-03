@@ -11,23 +11,24 @@
 
 header {
   max-height: 79px;
-  padding: 22px 0;
-  box-shadow: 0 0 2px 0 #e9e9e9; }
-  @media screen and (max-width: 575px) {
-    header .menu-margin {
-      margin-left: 0; } }
-  @media screen and (min-width: 575px) {
-    header .menu-margin {
-      float: left;
-      margin-left: 150px;
-      width: 1px;
-      height: 1px; } }
+  padding: 22px 0; }
+  header .menu-margin {
+    float: left;
+    margin-left: 15%;
+    width: 1px;
+    height: 1px; }
   header .menu-elements {
     float: left; }
     header .menu-elements .element-menu {
       float: left;
       margin-right: 32px;
       padding-top: 10px; }
+      @media screen and (max-width: 391px) {
+        header .menu-elements .element-menu {
+          margin-right: 10px; } }
+      @media screen and (max-width: 391px) {
+        header .menu-elements .element-menu :last-child {
+          margin-left: 10px; } }
     header .menu-elements .selected {
       color: #ff801a; }
     header .menu-elements .line {
@@ -41,18 +42,42 @@ header {
     header .loggedIn img, header .loggedIn span {
       padding-left: 10px;
       font-size: 15px; }
-    @media screen and (max-width: 641px) {
+    @media screen and (max-width: 768px) {
       header .loggedIn span, header .loggedIn img.arrow {
         display: none; } }
-    @media screen and (max-width: 641px) {
+    @media screen and (min-width: 768px) {
+      header .loggedIn span, header .loggedIn img.arrow {
+        display: inline; } }
+    @media screen and (max-width: 768px) {
       header .loggedIn {
         float: none; } }
+    @media screen and (min-width: 768px) {
+      header .loggedIn {
+        float: right; } }
+    @media screen and (max-width: 570px) {
+      header .loggedIn img.photoOfLogged {
+        position: absolute;
+        top: 10px;
+        left: 20px; } }
 
 #timetable {
   padding: 33px 0; }
+  @media screen and (max-width: 768px) {
+    #timetable {
+      width: 300px;
+      margin: auto; } }
+  @media screen and (min-width: 768px) {
+    #timetable {
+      width: auto; } }
   #timetable .progressBar p {
     font-size: 7px;
     margin: 0 0 12px 0; }
+    @media screen and (max-width: 768px) {
+      #timetable .progressBar p {
+        margin-left: 70px; } }
+    @media screen and (min-width: 768px) {
+      #timetable .progressBar p {
+        margin: 0 0 12px 0; } }
   #timetable .progressBar div.bar {
     -ms-grid-column: 1; }
     #timetable .progressBar div.bar .icon {
@@ -77,6 +102,12 @@ header {
   @media screen and (max-width: 992px) {
     #timetable .progressBar {
       padding-top: 10px; } }
+  @media screen and (max-width: 768px) {
+    #timetable .progressBar {
+      margin-left: 25px; } }
+  @media screen and (min-width: 768px) {
+    #timetable .progressBar {
+      margin: 0; } }
   #timetable .week {
     text-align: center; }
     #timetable .week table td {
@@ -94,6 +125,18 @@ header {
       cursor: pointer; }
     #timetable .week img.disabled {
       display: none; }
+  @media screen and (max-width: 768px) {
+    #timetable .foodOptions {
+      margin-left: 55px; } }
+  @media screen and (min-width: 768px) {
+    #timetable .foodOptions {
+      margin: 0 0 12px 0; } }
+  @media screen and (max-width: 768px) {
+    #timetable .foodOptions p {
+      margin-left: 30px; } }
+  @media screen and (min-width: 768px) {
+    #timetable .foodOptions p {
+      margin: 0 0 12px 0; } }
   #timetable .foodOptions div.foodOptionsContent {
     float: right;
     font-size: 7px;
