@@ -22,26 +22,28 @@ $color-day-green: #adbb0c;
 header {
   max-height: 79px;
   padding: 22px 0;
-  box-shadow: 0 0 2px 0 $color-table;
   .menu-margin {
 
-    @media screen and (max-width:575px) {
-      margin-left: 0;
-    }
-    @media screen and (min-width: 575px) {
+
       float: left;
-      margin-left: 150px;
+      margin-left: 15%;
       width: 1px;
       height: 1px;
-    }
   }
   .menu-elements {
     float: left;
-
     .element-menu {
       float: left;
       margin-right: 32px;
       padding-top: 10px;
+      @media screen and (max-width: 391px) {
+        margin-right: 10px;
+      }
+      :last-child {
+        @media screen and (max-width: 391px) {
+          margin-left: 10px;
+        }
+      }
     }
     .selected {
       color: $color-orange;
@@ -61,24 +63,50 @@ header {
       font-size: 15px;
     }
     span, img.arrow {
-      @media screen and (max-width: 641px) {
+      @media screen and (max-width: 768px) {
         display: none;
+      }
+      @media screen and (min-width: 768px) {
+        display: inline;
       }
     }
 
-      @media screen and (max-width: 641px) {
+      @media screen and (max-width: 768px) {
         float: none;
+    }
+    @media screen and (min-width: 768px) {
+      float: right;
+    }
+    img.photoOfLogged {
+      @media screen and (max-width: 570px) {
+        position: absolute;
+        top: 10px;
+        left: 20px;
+      }
     }
   }
 }
 
 #timetable {
   padding: 33px 0;
+  @media screen and (max-width: 768px) {
+    width: 300px;
+    margin: auto;
+  }
+  @media screen and (min-width: 768px) {
+    width: auto;
+  }
 
   .progressBar {
     p {
       font-size: 7px;
       margin: 0 0 12px 0;
+      @media screen and (max-width: 768px) {
+        margin-left: 70px;
+      }
+      @media screen and (min-width: 768px) {
+        margin: 0 0 12px 0;
+      }
     }
     div.bar {
       -ms-grid-column: 1;
@@ -113,6 +141,12 @@ header {
     @media screen and (max-width: 992px) {
       padding-top: 10px;
     }
+    @media screen and (max-width: 768px) {
+      margin-left: 25px;
+    }
+    @media screen and (min-width: 768px) {
+      margin: 0;
+    }
   }
   .week {
     text-align: center;
@@ -139,6 +173,20 @@ header {
     }
   }
   .foodOptions {
+    @media screen and (max-width: 768px) {
+      margin-left: 55px;
+    }
+    @media screen and (min-width: 768px) {
+      margin: 0 0 12px 0;
+    }
+    p {
+      @media screen and (max-width: 768px) {
+        margin-left: 30px;
+      }
+      @media screen and (min-width: 768px) {
+        margin: 0 0 12px 0;
+      }
+    }
     div.foodOptionsContent {
       float: right;
       font-size: 7px;
