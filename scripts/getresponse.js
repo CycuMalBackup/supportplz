@@ -86,14 +86,14 @@ window.onload = function () {
     };
 
     var getDietType = function () {
-        var dietType = "<tr>";
+        var dietType = "<tr class='dietTypeTr'>";
         dietType = "<td></td>";
         for (var i = 0; i < mealPlan.length; i++) {
             var dailyMealPlan = mealPlan[i];
             if (dailyMealPlan.dietType === guiltFree) {
                 dietType += "<td rowspan=\"2\"><img src=\"./images/print.png\" alt=\"print\"/><span>Print</span></td>";
             } else {
-                dietType += "<td>" + dailyMealPlan.dietType + "</td>";
+                dietType += "<td class='dietTypeCell'>" + dailyMealPlan.dietType + "</td>";
             }
         }
         dietType += "</tr>";
@@ -101,24 +101,24 @@ window.onload = function () {
     };
 
     var getWorkoutData = function () {
-        var workout = "<tr>";
-        workout += "<td><span>Workout</span><img src='./images/workoutArrow.png' alt='arrow'></td>";
+        var workout = "<tr class='workoutTr'>";
+        workout += "<td><span class='workout'>Workout</span><img src='./images/workoutArrow.png' alt='arrow'></td>";
         for (var i = 0; i < mealPlan.length; i++) {
             var dailyWorkout = mealPlan[i];
             if(dailyWorkout.dietType !== guiltFree){
                 if(dailyWorkout.workoutToDo === "true" && dailyWorkout.workoutDone === "true") {
                     workout +=
-                        "<td>" +
+                        "<td class='workoutToDo'>" +
                         "<img src='./images/workoutDone.png' alt='workoutDone'>" +
-                        "<img src='./images/workoutDoneTick.png' alt='tick'>" +
+                        "<img class='workoutDone' src='./images/workoutDoneTick.png' alt='tick'>" +
                         "</td>";
                 } else if (dailyWorkout.workoutToDo === "true" && dailyWorkout.workoutDone === "false") {
                     workout +=
-                        "<td>" +
+                        "<td class='workoutToDo'>" +
                         "<img src='./images/workout.png' alt='workoutToDo'>" +
                         "</td>";
                 } else {
-                    workout += "<td>" + dailyWorkout.workoutToDo + "</td>";
+                    workout += "<td class='workoutToDo'>" + dailyWorkout.workoutToDo + "</td>";
                 }
             }
         }
@@ -179,7 +179,7 @@ window.onload = function () {
 var mealPlan = [
     {
         "day": "1",
-        "dietType": "LOW CARB",
+        "dietType": "LOW-CARB",
         "workoutToDo": "true",
         "workoutDone": "true",
         "meals": [
@@ -192,7 +192,7 @@ var mealPlan = [
     },
     {
         "day": "2",
-        "dietType": "LOW CARB",
+        "dietType": "LOW-CARB",
         "workoutToDo": "true",
         "workoutDone": "true",
         "meals": [
@@ -205,7 +205,7 @@ var mealPlan = [
     },
     {
         "day": "3",
-        "dietType": "HIGH CARB",
+        "dietType": "HIGH-CARB",
         "workoutToDo": "true",
         "workoutDone": "false",
         "meals": [
@@ -218,7 +218,7 @@ var mealPlan = [
     },
     {
         "day": "4",
-        "dietType": "LOW CARB",
+        "dietType": "LOW-CARB",
         "workoutToDo": "true",
         "workoutDone": "false",
         "meals": [
@@ -231,7 +231,7 @@ var mealPlan = [
     },
     {
         "day": "5",
-        "dietType": "LOW CARB",
+        "dietType": "LOW-CARB",
         "workoutToDo": "true",
         "workoutDone": "false",
         "meals": [
@@ -244,7 +244,7 @@ var mealPlan = [
     },
     {
         "day": "6",
-        "dietType": "HIGH CARB",
+        "dietType": "HIGH-CARB",
         "workoutToDo": "true",
         "workoutDone": "false",
         "meals": [

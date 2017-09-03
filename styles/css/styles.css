@@ -78,27 +78,26 @@ header {
     @media screen and (min-width: 768px) {
       #timetable .progressBar p {
         margin: 0 0 12px 0; } }
-  #timetable .progressBar div.bar {
-    -ms-grid-column: 1; }
-    #timetable .progressBar div.bar .icon {
-      width: 20px;
-      height: 10px; }
-    #timetable .progressBar div.bar .weekItem {
-      float: left; }
-      #timetable .progressBar div.bar .weekItem span {
-        font-size: 7px;
-        margin-left: 12px; }
-      #timetable .progressBar div.bar .weekItem .firstSpan {
-        margin-left: 3px; }
-      #timetable .progressBar div.bar .weekItem .first {
-        background-position: -10px 0;
-        width: 10px; }
-      #timetable .progressBar div.bar .weekItem .green {
-        background-image: url(../../images/progressBar1.png); }
-      #timetable .progressBar div.bar .weekItem .white {
-        background-image: url(../../images/progressBar2.png); }
-      #timetable .progressBar div.bar .weekItem .grey {
-        background-image: url(../../images/progressBar3.png); }
+  #timetable .progressBar div.bar .icon {
+    width: 20px;
+    height: 10px;
+    margin-bottom: 8px; }
+  #timetable .progressBar div.bar .weekItem {
+    float: left; }
+    #timetable .progressBar div.bar .weekItem span {
+      font-size: 7px;
+      margin-left: 12px; }
+    #timetable .progressBar div.bar .weekItem .firstSpan {
+      margin-left: 3px; }
+    #timetable .progressBar div.bar .weekItem .first {
+      background-position: -10px 0;
+      width: 10px; }
+    #timetable .progressBar div.bar .weekItem .green {
+      background-image: url(../../images/progressBar1.png); }
+    #timetable .progressBar div.bar .weekItem .white {
+      background-image: url(../../images/progressBar2.png); }
+    #timetable .progressBar div.bar .weekItem .grey {
+      background-image: url(../../images/progressBar3.png); }
   @media screen and (max-width: 992px) {
     #timetable .progressBar {
       padding-top: 10px; } }
@@ -160,10 +159,20 @@ header {
 
 #mealPlan .tablePlaceHolder {
   overflow-x: auto; }
-  #mealPlan .tablePlaceHolder span.timeTable {
+  #mealPlan .tablePlaceHolder tr.workoutTr, #mealPlan .tablePlaceHolder td.dietTypeCell {
+    height: 35px; }
+    #mealPlan .tablePlaceHolder tr.workoutTr img.workoutDone, #mealPlan .tablePlaceHolder td.dietTypeCell img.workoutDone {
+      margin-left: 10px; }
+  #mealPlan .tablePlaceHolder td.workoutToDo {
+    border-top: 2px solid #d7d7d7; }
+  #mealPlan .tablePlaceHolder td.workoutToDo, #mealPlan .tablePlaceHolder td.dietTypeCell {
+    border-right: 2px solid #d7d7d7; }
+  #mealPlan .tablePlaceHolder span.timeTable, #mealPlan .tablePlaceHolder span.workout, #mealPlan .tablePlaceHolder td.dietTypeCell {
     color: #828282;
     font-size: 11px;
     font-weight: bold; }
+  #mealPlan .tablePlaceHolder span.workout {
+    margin: 11px 5px; }
   #mealPlan .tablePlaceHolder .tableHeaderDay {
     font-size: 17px;
     color: #adbb0c;
@@ -208,6 +217,7 @@ header {
 
 #mealPlan tr > th:first-child,
 #mealPlan tr > td:first-child {
+  border-color: #d7d7d7;
   border-right: 0; }
 
 #mealPlan tr > th:last-child,
