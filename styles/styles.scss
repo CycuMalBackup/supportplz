@@ -1,7 +1,6 @@
 $small-device-max-width: 768px;
 $color-orange: #ff801a;
 $color-table: #e9e9e9;
-$color-table-column-selected: red;
 $color-green: #b5c409;
 $padding-food-options: 10px;
 $color-day-green: #adbb0c;
@@ -250,7 +249,7 @@ margin: 11px 5px;
     td.meal-cell {
       position: relative;
       div.cellDataContainer {
-        height: 90px;
+        min-height: 90px;
         margin: 13px 23px 0 13px;
         text-align: left;
 
@@ -282,10 +281,10 @@ margin: 11px 5px;
     border-right: 2px solid $color-table;
   }
   th {
-    width: 13%;
+    min-width: 120px;
   }
   th:first-child {
-    width: 9%;
+    min-width: 80px;
   }
   tr:first-child > th,
   tr:first-child > td {
@@ -318,13 +317,13 @@ margin: 11px 5px;
   tr > th.selectedYesterday,
   tr > td.selected,
   tr > th.selected {
-    border-right-color: $color-table-column-selected;
+    border-right-color: $color-orange;
   }
   tr > th.selected {
-    border-top: 2px solid $color-table-column-selected;
+    border-top: 2px solid $color-orange;
   }
   tr:last-child > td.selected {
-    border-bottom: 2px solid $color-table-column-selected;
+    border-bottom: 2px solid $color-orange;
   }
 }
 
