@@ -1,6 +1,7 @@
 window.onload = function () {
     const maxWeek = 12,
         disabledClass = "disabled",
+        selectedDay = "2",
         guiltFree = "GUILT FREE";
     var currentWeek = 5,
         previousWeekButton = document.getElementsByClassName('js-week-previous')[0],
@@ -13,9 +14,7 @@ window.onload = function () {
         tableHtml += getDietType();
         tableHtml += getWorkoutData();
         tableHtml += "</table>";
-        console.log(tableHtml);
         return tableHtml;
-
     };
 
     var displayTable = function () {
