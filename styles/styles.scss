@@ -317,7 +317,7 @@ margin: 11px 5px;
   tr > th.selectedYesterday,
   tr > td.selected,
   tr > th.selected {
-    border-right-color: $color-orange !important;
+    border-right: 2px solid $color-orange !important;
   }
   tr > th.selected {
     border-top: 2px solid $color-orange !important;
