@@ -241,13 +241,13 @@ header {
 #mealPlan tr > th.selectedYesterday,
 #mealPlan tr > td.selected,
 #mealPlan tr > th.selected {
-  border-right-color: #ff801a; }
+  border-right-color: #ff801a !important; }
 
 #mealPlan tr > th.selected {
-  border-top: 2px solid #ff801a; }
+  border-top: 2px solid #ff801a !important; }
 
 #mealPlan tr:last-child > td.selected {
-  border-bottom: 2px solid #ff801a; }
+  border-bottom: 2px solid #ff801a !important; }
 
 .time {
   width: 85px; }
