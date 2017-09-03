@@ -75,6 +75,10 @@ header {
 #timetable {
   padding: 33px 0;
 
+  @media screen and (max-width: $small-device-max-width) {
+    width: 300px;
+    margin: auto;
+  }
   .progressBar {
     p {
       font-size: 7px;

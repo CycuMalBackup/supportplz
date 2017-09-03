@@ -50,6 +50,10 @@ header {
 
 #timetable {
   padding: 33px 0; }
+  @media screen and (max-width: 768px) {
+    #timetable {
+      width: 300px;
+      margin: auto; } }
   #timetable .progressBar p {
     font-size: 7px;
     margin: 0 0 12px 0; }
