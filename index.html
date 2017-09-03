@@ -12,7 +12,8 @@
 </head>
 
 <body>
-    <div class="container">
+<div class="container">
+    <div class="top-two-sections">
         <header>
             <div class="menu-margin hidden-sm-down"></div>
             <div class="menu-elements">
@@ -30,113 +31,117 @@
             <div class="loggedIn">
                 <img src="./images/headerPhoto.png" alt="photo">
                 <span>Olivia Wilde</span>
-                <img src="./images/headerArrowDown.png" alt="arrow_down">
+                <img class="arrow" src="./images/headerArrowDown.png" alt="arrow_down">
             </div>
             <div class="clearfix"></div>
         </header>
+        <section id="timetable">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12  col-sm-push-4 col-md-4 col-md-push-4 col-md-offset-0 week">
+                    <table>
+                        <tr>
+                            <td><img class="js-week-previous" src="./images/prevWeek.png" alt="backwardArrow"></td>
+                            <td>
+                                <div class="week-current js-week-current">Week 7</div>
+                            </td>
+                            <td><img class="js-week-next" src="./images/nextWeek.png" alt="forwardArrow"></td>
+                        </tr>
+                    </table>
+                </div>
 
-        <main>
-            <section id="timetable">
-                <div class="row">
-                    <div class="col-sm-4 progressBar">
-                        <p>YOUR 12 WEEK PROGRESS</p>
-                        <div class="bar">
-                            <div class="weekItem">
-                                <div class="first green icon"></div>
-                                <span class="firstSpan">1</span></div>
-                            <div class="weekItem">
-                                <div class="green icon"></div>
-                                <span>2</span></div>
-                            <div class="weekItem">
-                                <div class="green icon"></div>
-                                <span>3</span></div>
-                            <div class="weekItem">
-                                <div class="green icon"></div>
-                                <span>4</span></div>
-                            <div class="weekItem">
-                                <div class="green icon"></div>
-                                <span>5</span></div>
-                            <div class="weekItem">
-                                <div class="green icon"></div>
-                                <span>6</span></div>
-                            <div class="weekItem">
-                                <div class="white icon"></div>
-                                <span>7</span></div>
-                            <div class="weekItem">
-                                <div class="grey icon"></div>
-                                <span>8</span></div>
-                            <div class="weekItem">
-                                <div class="grey icon"></div>
-                                <span>9</span></div>
-                            <div class="weekItem">
-                                <div class="grey icon"></div>
-                                <span>10</span></div>
-                            <div class="weekItem">
-                                <div class="grey icon"></div>
-                                <span>11</span></div>
-                            <div class="weekItem">
-                                <div class="grey icon"></div>
-                                <span>12</span></div>
-                        </div>
-                        <div class="clearfix"></div>
+                <div class="col-xs-12 col-sm-6 col-md-4 col-md-pull-4 progressBar">
+                    <p>YOUR 12 WEEK PROGRESS</p>
+                    <div class="bar">
+                        <div class="weekItem">
+                            <div class="first green icon"></div>
+                            <span class="firstSpan">1</span></div>
+                        <div class="weekItem">
+                            <div class="green icon"></div>
+                            <span>2</span></div>
+                        <div class="weekItem">
+                            <div class="green icon"></div>
+                            <span>3</span></div>
+                        <div class="weekItem">
+                            <div class="green icon"></div>
+                            <span>4</span></div>
+                        <div class="weekItem">
+                            <div class="green icon"></div>
+                            <span>5</span></div>
+                        <div class="weekItem">
+                            <div class="green icon"></div>
+                            <span>6</span></div>
+                        <div class="weekItem">
+                            <div class="white icon"></div>
+                            <span>7</span></div>
+                        <div class="weekItem">
+                            <div class="grey icon"></div>
+                            <span>8</span></div>
+                        <div class="weekItem">
+                            <div class="grey icon"></div>
+                            <span>9</span></div>
+                        <div class="weekItem">
+                            <div class="grey icon"></div>
+                            <span>10</span></div>
+                        <div class="weekItem">
+                            <div class="grey icon"></div>
+                            <span>11</span></div>
+                        <div class="weekItem">
+                            <div class="grey icon"></div>
+                            <span>12</span></div>
                     </div>
-                    <div class="col-sm-4 week">
-                        <table>
-                            <tr>
-                                <td><img class="js-week-previous" src="./images/prevWeek.png" alt="backwardArrow"></td>
-                                <td><div class="week-current js-week-current">Week 7</div></td>
-                                <td><img class="js-week-next" src="./images/nextWeek.png" alt="forwardArrow"></td>
-                            </tr>
-                        </table>
-                    </div>
-                    <div class="col-sm-4 foodOptions">
-                        <div class="foodOptionsContent">
-                            <p>SELECT YOUR PROTEIN OPTIONS</p>
-                            <ul>
-                                <li><img src="./images/food1.png" alt="vege"></li>
-                                <li><img src="./images/food2.png" alt="cheese"></li>
-                                <li><img src="./images/food3.png" alt="steak"></li>
-                                <li><img src="./images/food4.png" alt="fish"></li>
-                                <li><img src="./images/food5.png" alt="chicken"></li>
-                            </ul>
-                        </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-sm-push-0 col-md-4 foodOptions">
+                    <div class="foodOptionsContent">
+                        <p>SELECT YOUR PROTEIN OPTIONS</p>
+                        <ul>
+                            <li><img src="./images/food1.png" alt="vege"></li>
+                            <li><img src="./images/food2.png" alt="cheese"></li>
+                            <li><img src="./images/food3.png" alt="steak"></li>
+                            <li><img src="./images/food4.png" alt="fish"></li>
+                            <li><img src="./images/food5.png" alt="chicken"></li>
+                        </ul>
                     </div>
                 </div>
-            </section>
 
-            <section id="mealPlan">
-                <div class="tablePlaceHolder" style="overflow-x:auto;">
-                </div>
-            </section>
-
-            <section id="bottomBoxes">
-                <div class="row">
-                    <div class="col-sm-4 buyNow">
-                        <h1>Running out of products?</h1>
-                        <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
-                        <button>Buy now<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
-                    </div>
-                    <div class="col-sm-4 trainer">
-                        <h1>Bod•e Trainer in your pocket</h1>
-                        <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
-                        <button>
-                            <img src="./images/ios.png" alt="apple">iOS
-                            <img src="./images/bottomButtonsArrow.png" alt="arrow">
-                        </button>
-                        <button><img src="./images/android.png" alt="android">
-                            Android
-                            <img src="./images/bottomButtonsArrow.png" alt="arrow">
-                        </button>
-                    </div>
-                    <div class="col-sm-4 faq">
-                        <h1>Frequently Asked Questions</h1>
-                        <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
-                        <button>Read FAQs<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
-                    </div>
-                </div>
-            </section>
-        </main>
+            </div>
+        </section>
     </div>
+    <main>
+
+        <section id="mealPlan">
+            <div class="tablePlaceHolder" style="overflow-x:auto;">
+            </div>
+        </section>
+
+        <section id="bottomBoxes">
+            <div class="row">
+                <div class="col-sm-4 buyNow">
+                    <h1>Running out of products?</h1>
+                    <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
+                    <button>Buy now<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
+                </div>
+                <div class="col-sm-4 trainer">
+                    <h1>Bod•e Trainer in your pocket</h1>
+                    <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
+                    <button>
+                        <img src="./images/ios.png" alt="apple">iOS
+                        <img src="./images/bottomButtonsArrow.png" alt="arrow">
+                    </button>
+                    <button><img src="./images/android.png" alt="android">
+                        Android
+                        <img src="./images/bottomButtonsArrow.png" alt="arrow">
+                    </button>
+                </div>
+                <div class="col-sm-4 faq">
+                    <h1>Frequently Asked Questions</h1>
+                    <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
+                    <button>Read FAQs<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
 
 </body>
 

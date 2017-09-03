@@ -13,7 +13,9 @@ window.onload = function () {
         tableHtml += getDietType();
         tableHtml += getWorkoutData();
         tableHtml += "</table>";
+        console.log(tableHtml);
         return tableHtml;
+
     };
 
     var displayTable = function () {
@@ -48,8 +50,8 @@ window.onload = function () {
 
     var getMealsByHour = function (hour, hourId) {
         var mealsByHours = "<td>" + hour + "</td>";
-        for (var index = 0; index < mealPlan.length; index++) {
-            var dayPlan = mealPlan[index],
+        for (var i = 0; i < mealPlan.length; i++) {
+            var dayPlan = mealPlan[i],
                 hourSpecificMeal = dayPlan.meals[hourId];
             if (dayPlan.dietType !== guiltFree) {
                 mealsByHours += getMealHtml(hourSpecificMeal, dayPlan.day === "2");
@@ -172,12 +174,6 @@ window.onload = function () {
         }
     };
     displayTable();
-
-//     var updateTableHeaders = function () {
-// previousWeekButton.onclick =
-//     console.log('dupa');
-//     };
-//     updateTableHeaders();
 };
 
 var mealPlan = [

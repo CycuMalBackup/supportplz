@@ -11,9 +11,12 @@ $color-day-green: #adbb0c;
 }
 
 .container {
-  max-width: 978px;
   margin: 0 auto;
-  padding: 0px 10px;
+  padding: 0 10px;
+  @media screen and (max-width:768px) {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 header {
@@ -21,10 +24,16 @@ header {
   padding: 22px 0;
   box-shadow: 0 0 2px 0 $color-table;
   .menu-margin {
-    float: left;
-    margin-left: 150px;
-    width: 1px;
-    height: 1px;
+
+    @media screen and (max-width:575px) {
+      margin-left: 0;
+    }
+    @media screen and (min-width: 575px) {
+      float: left;
+      margin-left: 150px;
+      width: 1px;
+      height: 1px;
+    }
   }
   .menu-elements {
     float: left;
@@ -50,6 +59,15 @@ header {
     img, span {
       padding-left: 10px;
       font-size: 15px;
+    }
+    span, img.arrow {
+      @media screen and (max-width: 641px) {
+        display: none;
+      }
+    }
+
+      @media screen and (max-width: 641px) {
+        float: none;
     }
   }
 }
@@ -92,19 +110,26 @@ header {
         }
       }
     }
+    @media screen and (max-width: 992px) {
+      padding-top: 10px;
+    }
   }
   .week {
     text-align: center;
     table {
-      td{
+      td {
         min-width: 26px;
       }
+    }
+    @media screen and (max-width: 575px) {
+      float: left;
     }
     div.week-current {
       font-size: 35px;
       min-width: 230px;
       padding: 0 42px;
       white-space: nowrap;
+      text-align: center;
     }
     img {
       cursor: pointer;
@@ -116,27 +141,37 @@ header {
   .foodOptions {
     div.foodOptionsContent {
       float: right;
-    }
-    @media (max-width: $small-device-max-width) {
-      div.foodOptionsContent {
-        float: left;
-      }
-    }
-    p {
       font-size: 7px;
       margin: 0 0 12px 0;
       padding-left: $padding-food-options;
-    }
+      @media screen and (max-width: 768px) {
+        float: left;
+        padding: 10px 0 0 0;
+      }
+      @media screen and (min-width:768px) and (max-width: 992px) {
+        padding-top: 10px;
+        float:right;
+      }
+
+     }
+    //@media screen and (min-width:575px) {
+    //  float: right;
+    //  display: block;
+    //}
     ul {
       display: flex;
       list-style-type: none;
       padding: 0;
       margin: 0;
+      :first-child {
+        padding-left: 0;
+      }
       li {
         padding-left: $padding-food-options;
       }
     }
   }
+
 }
 
 #mealPlan {
@@ -156,15 +191,15 @@ header {
   }
   tr:first-child > th,
   tr:first-child > td {
-    border-top: 0px;
+    border-top: 0;
   }
   tr > th:first-child,
   tr > td:first-child {
-    border-right: 0px;
+    border-right: 0;
   }
   tr > th:last-child,
   tr > td:last-child {
-    border-right: 0px;
+    border-right: 0;
     border-left: 2px solid $color-table;
   }
   tr > th:first-child,
@@ -174,10 +209,10 @@ header {
     background: url('../../images/table_background.png') repeat;
   }
   tr:nth-last-child(2) > td {
-    border-top: 0px;
+    border-top: 0;
   }
   tr:nth-last-child(2) > td:first-child {
-    border-right: 0px;
+    border-right: 0;
   }
   // HAX jak nic -.-
   tr > td.selectedYesterday,

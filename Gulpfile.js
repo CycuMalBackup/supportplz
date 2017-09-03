@@ -6,3 +6,6 @@ gulp.task('styles', function() {
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest('./styles/css/'));
 });
+gulp.task('watch', function() {
+   gulp.watch('./styles/**.scss', ['styles']);
+});
