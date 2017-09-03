@@ -53,7 +53,7 @@ window.onload = function () {
             var dayPlan = mealPlan[i],
                 hourSpecificMeal = dayPlan.meals[hourId];
             if (dayPlan.dietType !== guiltFree) {
-                mealsByHours += getMealHtml(hourSpecificMeal, dayPlan.day === "2");
+                mealsByHours += getMealHtml(hourSpecificMeal, dayPlan.day === 2);
             }
             else if (hour === mealHours[0]) {
                 mealsByHours += getGuiltFreeDayTemplateHtml();
