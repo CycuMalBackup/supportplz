@@ -49,7 +49,7 @@ window.onload = function () {
     };
 
     var getMealsByHour = function (hour, hourId) {
-        var mealsByHours = "<td>" + hour + "</td>";
+        var mealsByHours = "<td><span class='timeTable'>" + hour + "</span></td>";
         for (var i = 0; i < mealPlan.length; i++) {
             var dayPlan = mealPlan[i],
                 hourSpecificMeal = dayPlan.meals[hourId];
@@ -68,17 +68,17 @@ window.onload = function () {
             wasEaten = hourSpecificMeal.eaten,
             mealName = hourSpecificMeal.meal;
 
-        var mealHtml = "<td><div class='cellDataContainer'>";
-        mealHtml += "<span class='cellDataMeal'>" + mealName + "</span>";
+        var mealHtml = "<td class='meal-cell'><div class='cellDataContainer'>";
+
         if (wasEaten === "true") {
             mealHtml += "<img class='was-eaten' src='./images/mealEaten.png' alt='tick'>";
         }
-
+        mealHtml += "<span class='cellDataMeal'>" + mealName + "</span>";
         if (mealId === 1) {
             if (currentDay === true) {
-                mealHtml += "<img src=\"./images/todaysShake.png\" alt=\"shake\">";
+                mealHtml += "<img class='shakePicture' src=\"./images/todaysShake.png\" alt=\"shake\">";
             } else {
-                mealHtml += "<img src=\"./images/shake.png\" alt=\"shake\">";
+                mealHtml += "<img class='shakePicture' src=\"./images/shake.png\" alt=\"shake\">";
             }
         }
         mealHtml += "</div></td>";
