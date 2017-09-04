@@ -117,7 +117,8 @@ header {
     #timetable .week div.week-current {
       font-size: 44px;
       min-width: 230px;
-      text-align: center; }
+      text-align: center;
+      color: #ff801a; }
     #timetable .week img {
       cursor: pointer; }
     #timetable .week img.disabled {
@@ -163,6 +164,8 @@ header {
     height: 35px; }
     #mealPlan .tablePlaceHolder tr.workoutTr img.workoutDone, #mealPlan .tablePlaceHolder td.dietTypeCell img.workoutDone {
       margin-left: 10px; }
+  #mealPlan .tablePlaceHolder td.meal-cell.selected div.cellDataContainer span.cellDataMeal {
+    color: black; }
   #mealPlan .tablePlaceHolder td.workoutToDo {
     border-top: 2px solid #d7d7d7; }
   #mealPlan .tablePlaceHolder td.workoutToDo, #mealPlan .tablePlaceHolder td.dietTypeCell {
@@ -177,6 +180,8 @@ header {
     font-size: 17px;
     color: #adbb0c;
     padding: 17px 0; }
+  #mealPlan .tablePlaceHolder .tableHeaderDay.selected {
+    color: #ff801a; }
   #mealPlan .tablePlaceHolder td.meal-cell {
     position: relative; }
     #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer {

@@ -1,7 +1,7 @@
 window.onload = function () {
     const maxWeek = 12,
         disabledClass = "disabled",
-        selectedDay = 2,
+        selectedDay = 1,
         guiltFree = "GUILT FREE";
     var currentWeek = 5,
         previousWeekButton = document.getElementsByClassName('js-week-previous')[0],
@@ -34,14 +34,14 @@ window.onload = function () {
     };
 
     var getClassForSelectedCell = function(dayNumber) {
-        if(dayNumber == selectedDay - 1){
+        if(dayNumber === selectedDay - 1){
             return "selectedYesterday";
-        } else if(dayNumber == selectedDay) {
+        } else if(dayNumber === selectedDay) {
             return "selected";
         } else {
             return "";
         }
-    }
+    };
 
     var getMeals = function () {
         var meals = "";

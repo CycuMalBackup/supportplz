@@ -163,6 +163,7 @@ header {
       font-size: 44px;
       min-width: 230px;
       text-align: center;
+      color: $color-orange;
     }
     img {
       cursor: pointer;
@@ -225,25 +226,34 @@ header {
         margin-left: 10px;
       }
     }
+    td.meal-cell.selected {
+      div.cellDataContainer {
+        span.cellDataMeal {
+          color: black;
+        }
+      }
+    }
     td.workoutToDo {
       border-top: 2px solid $color-border-darker;
     }
     td.workoutToDo, td.dietTypeCell {
       border-right: 2px solid $color-border-darker;
     }
-    span.timeTable, span.workout,     td.dietTypeCell
-    {
+    span.timeTable, span.workout, td.dietTypeCell {
       color: $color-table-data-text;
       font-size: 11px;
       font-weight: bold;
     }
     span.workout {
-margin: 11px 5px;
+      margin: 11px 5px;
     }
     .tableHeaderDay {
       font-size: 17px;
       color: $color-day-green;
       padding: 17px 0;
+    }
+    .tableHeaderDay.selected {
+        color: $color-orange;
     }
 
     td.meal-cell {
@@ -312,7 +322,6 @@ margin: 11px 5px;
   tr:nth-last-child(2) > td:first-child {
     border-right: 0;
   }
-  // HAX jak nic -.-
   tr > td.selectedYesterday,
   tr > th.selectedYesterday,
   tr > td.selected,
