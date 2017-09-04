@@ -1,9 +1,9 @@
 $small-device-max-width: 768px;
+$padding-food-options: 10px;
 $color-orange: #ff801a;
 $color-table: #e9e9e9;
 $color-green: #b5c409;
 $color-header-menu-bottom-buttons: #7c7c7c;
-$padding-food-options: 10px;
 $color-day-green: #adbb0c;
 $color-table-data-text: #828282;
 $color-background-body: #f9f9f9;
@@ -21,7 +21,7 @@ body{
 .container {
   margin: 0 auto;
   padding: 0 10px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $small-device-max-width) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -71,18 +71,17 @@ header {
       font-size: 15px;
     }
     span, img.arrow {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $small-device-max-width) {
         display: none;
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $small-device-max-width) {
         display: inline;
       }
     }
-
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $small-device-max-width) {
       float: none;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $small-device-max-width) {
       float: right;
     }
     img.photoOfLogged {
@@ -102,11 +101,11 @@ div.underlinedHeader {
 #timetable {
   padding: 33px 0;
   background-color: $color-background-body;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $small-device-max-width) {
     width: 300px;
     margin: auto;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $small-device-max-width) {
     width: auto;
   }
 
@@ -115,10 +114,10 @@ div.underlinedHeader {
       font-size: 7px;
       margin: 0 0 12px 0;
       color: $color-paragraph;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $small-device-max-width) {
         margin-left: 70px;
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $small-device-max-width) {
         margin: 0 0 12px 0;
       }
     }
@@ -155,10 +154,10 @@ div.underlinedHeader {
     @media screen and (max-width: 992px) {
       padding-top: 10px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $small-device-max-width) {
       margin-left: 25px;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $small-device-max-width) {
       margin: 0;
     }
   }
@@ -178,6 +177,17 @@ div.underlinedHeader {
       text-align: center;
       color: $color-orange;
     }
+    img.js-week-next, img.js-week-previous {
+      -webkit-transition: all 200ms ease;
+      -moz-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+      transition: all 200ms ease;
+    }
+
+    img:hover {
+      -webkit-filter: opacity(0.3);
+    }
     img {
       cursor: pointer;
     }
@@ -186,17 +196,17 @@ div.underlinedHeader {
     }
   }
   .foodOptions {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $small-device-max-width) {
       margin-left: 55px;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $small-device-max-width) {
       margin: 0 0 12px 0;
     }
     p {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $small-device-max-width) {
         margin-left: 30px;
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $small-device-max-width) {
         margin: 0 0 12px 0;
       }
     }
@@ -205,11 +215,11 @@ div.underlinedHeader {
       font-size: 7px;
       margin: 0 0 12px 0;
       padding-left: $padding-food-options;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $small-device-max-width) {
         float: left;
         padding: 10px 0 0 0;
       }
-      @media screen and (min-width: 768px) and (max-width: 992px) {
+      @media screen and (min-width: $small-device-max-width) and (max-width: 992px) {
         padding-top: 10px;
         float: right;
       }
@@ -227,10 +237,24 @@ div.underlinedHeader {
       }
       li {
         padding-left: $padding-food-options;
+        img.foodIcons {
+          -webkit-transition: all 0.8s ease;
+          -moz-transition: all 0.8s ease;
+          -o-transition: all 0.8s ease;
+          -ms-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+        }
+        img:hover {
+
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
       }
     }
   }
-
 }
 main {
   background-color: $color-background-body;
@@ -384,6 +408,11 @@ main {
     p {
       color: $color-paragraph;
     }
+    @media screen and (max-width: $small-device-max-width) {
+      width: 100%;
+      float: left;
+      display: inline-block;
+    }
   }
   .bottomLine {
     float:left;
@@ -391,6 +420,11 @@ main {
     height: 26%;
     background: $color-bottom-border;
     margin: 23px 30px 0 25px;
+    @media screen and (max-width: $small-device-max-width) {
+      margin: 20px 0;
+      height: 1px;
+      width: 100%;
+    }
   }
   button.bottomButton {
     border: 1px solid $color-header-menu-bottom-buttons;
@@ -404,10 +438,17 @@ main {
       padding-bottom: 1px;
     }
     img {
-      padding: 0 5px 7px;
+      padding: 0 5px 5px;
       .bottomButton.btn.btn-light.ios {
         margin-bottom: 5px;
       }
     }
   }
 }
+div.element-menu:hover {
+  font-size: 120%;
+  text-shadow: 1px 1px;
+  cursor: pointer;
+}
+
+
