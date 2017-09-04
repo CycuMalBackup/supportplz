@@ -1,3 +1,7 @@
+@font-face {
+  font-family: myHelvetica;
+  src: url(../../HelveticaNeueLTStd-Md.otf); }
+
 body {
   background-color: #f9f9f9; }
 
@@ -15,7 +19,8 @@ body {
 header {
   max-height: 79px;
   padding: 22px 0;
-  background-color: white; }
+  background-color: white;
+  font-family: myHelvetica; }
   header .menu-margin {
     float: left;
     margin-left: 15%;
@@ -71,6 +76,7 @@ div.underlinedHeader {
   width: 100%; }
 
 #timetable {
+  font-family: myHelvetica;
   padding: 33px 0;
   background-color: #f9f9f9; }
   @media screen and (max-width: 768px) {
@@ -195,6 +201,7 @@ div.underlinedHeader {
 main {
   background-color: #f9f9f9; }
   main #mealPlan .tablePlaceHolder {
+    font-family: myHelvetica;
     overflow-x: auto;
     background-color: white; }
     main #mealPlan .tablePlaceHolder tr.workoutTr, main #mealPlan .tablePlaceHolder td.dietTypeCell {
@@ -296,7 +303,8 @@ main {
   width: 28%;
   float: left; }
   #bottomBoxes .mainBottom h2 {
-    color: #828282; }
+    color: #828282;
+    font-family: myHelvetica; }
   #bottomBoxes .mainBottom p {
     color: #a5a5a5; }
   @media screen and (max-width: 768px) {
@@ -325,7 +333,7 @@ main {
   background-color: white; }
   #bottomBoxes button.bottomButton span.bottomButtonSpan {
     font-size: 16px;
-    color: #7c7c7c;
+    color: #a5a5a5;
     padding-bottom: 1px; }
   #bottomBoxes button.bottomButton img {
     padding: 0 5px 5px; }

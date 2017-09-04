@@ -9,7 +9,12 @@ $color-table-data-text: #828282;
 $color-background-body: #f9f9f9;
 $color-border-darker: #d7d7d7;
 $color-bottom-border: #e1e1e1;
-$color-paragraph: #a5a5a5;
+$color-paragraph-buttons: #a5a5a5;
+
+@font-face {
+  font-family: myHelvetica;
+  src: url(../../HelveticaNeueLTStd-Md.otf);
+}
 
 body{
   background-color: $color-background-body;
@@ -31,6 +36,7 @@ header {
   max-height: 79px;
   padding: 22px 0;
   background-color:white;
+  font-family: myHelvetica;
   .menu-margin {
     float: left;
     margin-left: 15%;
@@ -99,6 +105,7 @@ div.underlinedHeader {
   width: 100%;
 }
 #timetable {
+  font-family: myHelvetica;
   padding: 33px 0;
   background-color: $color-background-body;
   @media screen and (max-width: $small-device-max-width) {
@@ -113,7 +120,7 @@ div.underlinedHeader {
     p {
       font-size: 7px;
       margin: 0 0 12px 0;
-      color: $color-paragraph;
+      color: $color-paragraph-buttons;
       @media screen and (max-width: $small-device-max-width) {
         margin-left: 70px;
       }
@@ -224,7 +231,7 @@ div.underlinedHeader {
         float: right;
       }
       p {
-        color: $color-paragraph;
+        color: $color-paragraph-buttons;
       }
     }
     ul {
@@ -260,6 +267,7 @@ main {
   background-color: $color-background-body;
   #mealPlan {
     .tablePlaceHolder {
+      font-family: myHelvetica;
       overflow-x: auto;
       background-color:white;
       tr.workoutTr, td.dietTypeCell {
@@ -396,6 +404,7 @@ main {
 }
 
 #bottomBoxes {
+
   :first-child {
     margin-left: 0;
   }
@@ -404,9 +413,10 @@ main {
     float: left;
     h2 {
       color: $color-table-data-text;
+      font-family: myHelvetica;
     }
     p {
-      color: $color-paragraph;
+      color: $color-paragraph-buttons;
     }
     @media screen and (max-width: $small-device-max-width) {
       width: 100%;
@@ -434,7 +444,7 @@ main {
     background-color: white;
     span.bottomButtonSpan {
       font-size: 16px;
-      color: $color-header-menu-bottom-buttons;
+      color: $color-paragraph-buttons;
       padding-bottom: 1px;
     }
     img {

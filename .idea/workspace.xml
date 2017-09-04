@@ -2,6 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3f080b83-ffbc-4b70-bcdc-e29bca2e5088" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HelveticaNeueLTStd-Lt.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HelveticaNeueLTStd-Md.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/HelveticaNeueLTStd-Th.otf" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/images/HelveticaNeueLTStd-Bd.otf" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/css/styles.css" afterPath="$PROJECT_DIR$/styles/css/styles.css" />
@@ -18,48 +22,18 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.40479362">
-      <split-first>
-        <leaf>
-          <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/styles/styles.scss">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="547">
-                  <caret line="189" column="5" lean-forward="false" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="5" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-first>
-      <split-second>
-        <leaf>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/index.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="263">
-                  <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
-                  <folding>
-                    <element signature="n#div#1;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="getresponse.js" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/scripts/getresponse.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="63">
-                  <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-        </leaf>
-      </split-second>
-    </splitter>
+    <leaf>
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/styles/styles.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="273">
+              <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -112,9 +86,10 @@
     <handled-path value="$PROJECT_DIR$/node_modules" />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="65" />
-    <option name="width" value="1855" />
-    <option name="height" value="1084" />
+    <option name="x" value="-9" />
+    <option name="y" value="37" />
+    <option name="width" value="1089" />
+    <option name="height" value="1038" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -146,11 +121,6 @@
             <path>
               <item name="getResponseTask" type="b2602c69:ProjectViewProjectNode" />
               <item name="getResponseTask" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="getResponseTask" type="b2602c69:ProjectViewProjectNode" />
-              <item name="getResponseTask" type="462c0819:PsiDirectoryNode" />
               <item name="styles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -176,8 +146,8 @@
       <recent name="C:\Users\pepes\WebstormProjects\getResponseTask\sass" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\pepes\WebstormProjects\getResponseTask\images" />
       <recent name="C:\Users\pepes\WebstormProjects\getResponseTask" />
+      <recent name="C:\Users\pepes\WebstormProjects\getResponseTask\images" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -218,7 +188,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158776000" />
+    <option name="totallyTimeSpent" value="161920000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
@@ -529,14 +499,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/getresponse.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="63">
-          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/styles/css/styles.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3150">
@@ -547,18 +509,26 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="39" column="30" lean-forward="false" selection-start-line="39" selection-start-column="30" selection-end-line="39" selection-end-column="30" />
+        <state relative-caret-position="231">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
             <element signature="n#div#1;n#div#0;n#section#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/scripts/getresponse.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="63">
+          <caret line="3" column="23" lean-forward="false" selection-start-line="3" selection-start-column="23" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/styles/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="547">
-          <caret line="189" column="5" lean-forward="false" selection-start-line="189" selection-start-column="5" selection-end-line="189" selection-end-column="5" />
+        <state relative-caret-position="273">
+          <caret line="16" column="1" lean-forward="true" selection-start-line="16" selection-start-column="1" selection-end-line="16" selection-end-column="1" />
           <folding />
         </state>
       </provider>
