@@ -246,7 +246,7 @@ header {
 #mealPlan tr > th.selectedYesterday,
 #mealPlan tr > td.selected,
 #mealPlan tr > th.selected {
-  border-right-color: #ff801a !important; }
+  border-right: 2px solid #ff801a !important; }
 
 #mealPlan tr > th.selected {
   border-top: 2px solid #ff801a !important; }

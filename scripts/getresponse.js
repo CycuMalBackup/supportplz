@@ -25,7 +25,7 @@ window.onload = function () {
 
     var getTableHeader = function (firstDayOfTheWeek) {
         var tableHeader = "<tr>";
-        tableHeader += "<th></th>";
+        tableHeader += "<th class='" + getClassForSelectedCell(0) + "'></th>";
         for (var dayNumber = 1; dayNumber <= 7 ; dayNumber++) {
             tableHeader += "<th class='tableHeaderDay " + getClassForSelectedCell(dayNumber) + "'>DAY <span class=\"week-day-number\">" + firstDayOfTheWeek++ + "</span></th>";
         }
@@ -54,7 +54,7 @@ window.onload = function () {
     };
 
     var getMealsByHour = function (hour, hourId) {
-        var mealsByHours = "<td><span class='timeTable'>" + hour + "</span></td>";
+        var mealsByHours = "<td class='" + getClassForSelectedCell(0) + "'><span class='timeTable'>" + hour + "</span></td>";
         for (var i = 0; i < mealPlan.length; i++) {
             var dayPlan = mealPlan[i],
                 hourSpecificMeal = dayPlan.meals[hourId];
@@ -92,7 +92,7 @@ window.onload = function () {
 
     var getDietType = function () {
         var dietType = "<tr class='dietTypeTr'>";
-        dietType = "<td></td>";
+        dietType = "<td class='" + getClassForSelectedCell(0) + "'></td>";
         for (var i = 0; i < mealPlan.length; i++) {
             var dailyMealPlan = mealPlan[i];
             var classForSelectedCell = getClassForSelectedCell(dailyMealPlan.day);
@@ -108,7 +108,7 @@ window.onload = function () {
 
     var getWorkoutData = function () {
         var workout = "<tr class='workoutTr'>";
-        workout += "<td><span class='workout'>Workout</span><img src='./images/workoutArrow.png' alt='arrow'></td>";
+        workout += "<td class='" + getClassForSelectedCell(0) + "'><span class='workout'>Workout</span><img src='./images/workoutArrow.png' alt='arrow'></td>";
         for (var i = 0; i < mealPlan.length; i++) {
             var dailyWorkout = mealPlan[i];
             if(dailyWorkout.dietType !== guiltFree){
