@@ -201,7 +201,6 @@ div.underlinedHeader {
 main {
   background-color: #f9f9f9; }
   main #mealPlan .tablePlaceHolder {
-    font-family: myHelvetica;
     overflow-x: auto;
     background-color: white; }
     main #mealPlan .tablePlaceHolder tr.workoutTr, main #mealPlan .tablePlaceHolder td.dietTypeCell {
@@ -326,7 +325,7 @@ main {
       width: 100%; } }
 
 #bottomBoxes button.bottomButton {
-  border: 1px solid #7c7c7c;
+  border: 1px solid #bdbdbd;
   border-radius: 3px;
   max-height: 33px;
   min-width: 95px;
