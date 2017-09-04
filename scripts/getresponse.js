@@ -1,7 +1,7 @@
 window.onload = function () {
     const maxWeek = 12,
         disabledClass = "disabled",
-        selectedDay = 1,
+        selectedDay = 2,
         guiltFree = "GUILT FREE";
     var currentWeek = 5,
         previousWeekButton = document.getElementsByClassName('js-week-previous')[0],
@@ -97,7 +97,7 @@ window.onload = function () {
             var dailyMealPlan = mealPlan[i];
             var classForSelectedCell = getClassForSelectedCell(dailyMealPlan.day);
             if (dailyMealPlan.dietType === guiltFree) {
-                dietType += "<td rowspan=\"2\" class='" + classForSelectedCell + "'><img src=\"./images/print.png\" alt=\"print\"/><span>Print</span></td>";
+                dietType += "<td rowspan=\"2\" class='" + classForSelectedCell + "'><img src=\"./images/print.png\" alt=\"print\"/><span class='print'>Print</span></td>";
             } else {
                 dietType += "<td class='dietTypeCell " + classForSelectedCell + "'>" + dailyMealPlan.dietType + "</td>";
             }

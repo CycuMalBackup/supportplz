@@ -13,7 +13,6 @@
 
 <body>
 <div class="container">
-    <div class="top-two-sections">
         <header>
             <div class="menu-margin hidden-sm-down"></div>
             <div class="menu-elements">
@@ -29,12 +28,13 @@
                 </div>
             </div>
             <div class="loggedIn">
-                <img class="photoOfLogged"src="./images/headerPhoto.png" alt="photo">
+                <img class="photoOfLogged" src="./images/headerPhoto.png" alt="photo">
                 <span>Olivia Wilde</span>
                 <img class="arrow" src="./images/headerArrowDown.png" alt="arrow_down">
             </div>
             <div class="clearfix"></div>
         </header>
+        <div class="underlinedHeader"></div>
         <section id="timetable">
             <div class="row">
                 <div class="col-xs-12 col-sm-12  col-sm-push-4 col-md-4 col-md-push-4 col-md-offset-0 week">
@@ -106,37 +106,46 @@
 
             </div>
         </section>
-    </div>
+
     <main>
 
         <section id="mealPlan">
-            <div class="tablePlaceHolder" style="overflow-x:auto;">
+            <div class="tablePlaceHolder">
             </div>
         </section>
 
         <section id="bottomBoxes">
             <div class="row">
-                <div class="col-sm-4 buyNow">
-                    <h1>Running out of products?</h1>
+                <div class="mainBottom buyNow">
+                    <h2>Running out of products?</h2>
                     <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
-                    <button>Buy now<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
-                </div>
-                <div class="col-sm-4 trainer">
-                    <h1>Bod•e Trainer in your pocket</h1>
-                    <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
-                    <button>
-                        <img src="./images/ios.png" alt="apple">iOS
-                        <img src="./images/bottomButtonsArrow.png" alt="arrow">
-                    </button>
-                    <button><img src="./images/android.png" alt="android">
-                        Android
+                    <button class="bottomButton btn btn-light">
+                        <span class="bottomButtonSpan">Buy now</span>
                         <img src="./images/bottomButtonsArrow.png" alt="arrow">
                     </button>
                 </div>
-                <div class="col-sm-4 faq">
-                    <h1>Frequently Asked Questions</h1>
+                <div class="bottomLine"></div>
+                <div class="mainBottom trainer">
+                    <h2>Bod•e Trainer in your pocket</h2>
                     <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
-                    <button>Read FAQs<img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
+                    <button class="bottomButton btn btn-light ios">
+                        <img src="./images/ios.png" alt="apple">
+                        <span class="bottomButtonSpan">iOS</span>
+                        <img src="./images/bottomButtonsArrow.png" alt="arrow">
+                    </button>
+                    <button class="bottomButton btn btn-light">
+                        <img src="./images/android.png" alt="android">
+                        <span class="bottomButtonSpan">Android</span>
+                        <img src="./images/bottomButtonsArrow.png" alt="arrow">
+                    </button>
+                </div>
+                <div class="bottomLine"></div>
+                <div class="mainBottom faq">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Lorem ipsum dolor sit amet, consect turadipiscing elit. Integer aliquet.</p>
+                    <button class="bottomButton btn btn-light">
+                        <span class="bottomButtonSpan">Read FAQs</span>
+                        <img src="./images/bottomButtonsArrow.png" alt="arrow"></button>
                 </div>
             </div>
         </section>
