@@ -1,3 +1,10 @@
+@font-face {
+  font-family: myHelvetica;
+  src: url(../../HelveticaNeueLTStd-Md.otf); }
+
+body {
+  background-color: #f9f9f9; }
+
 .clearfix {
   clear: both; }
 
@@ -11,7 +18,9 @@
 
 header {
   max-height: 79px;
-  padding: 22px 0; }
+  padding: 22px 0;
+  background-color: white;
+  font-family: myHelvetica; }
   header .menu-margin {
     float: left;
     margin-left: 15%;
@@ -22,7 +31,8 @@ header {
     header .menu-elements .element-menu {
       float: left;
       margin-right: 32px;
-      padding-top: 10px; }
+      padding-top: 10px;
+      color: #7c7c7c; }
       @media screen and (max-width: 391px) {
         header .menu-elements .element-menu {
           margin-right: 10px; } }
@@ -35,8 +45,8 @@ header {
       width: 25px;
       height: 2px;
       background: #ff801a;
-      margin-top: 8px;
-      color: #ff801a; }
+      color: #ff801a;
+      margin: auto; }
   header .loggedIn {
     float: right; }
     header .loggedIn img, header .loggedIn span {
@@ -60,8 +70,15 @@ header {
         top: 10px;
         left: 20px; } }
 
+div.underlinedHeader {
+  background: url("../../images/underlinedHeader_03.png") repeat;
+  height: 2px;
+  width: 100%; }
+
 #timetable {
-  padding: 33px 0; }
+  font-family: myHelvetica;
+  padding: 33px 0;
+  background-color: #f9f9f9; }
   @media screen and (max-width: 768px) {
     #timetable {
       width: 300px;
@@ -71,7 +88,8 @@ header {
       width: auto; } }
   #timetable .progressBar p {
     font-size: 7px;
-    margin: 0 0 12px 0; }
+    margin: 0 0 12px 0;
+    color: #a5a5a5; }
     @media screen and (max-width: 768px) {
       #timetable .progressBar p {
         margin-left: 70px; } }
@@ -117,7 +135,16 @@ header {
     #timetable .week div.week-current {
       font-size: 44px;
       min-width: 230px;
-      text-align: center; }
+      text-align: center;
+      color: #ff801a; }
+    #timetable .week img.js-week-next, #timetable .week img.js-week-previous {
+      -webkit-transition: all 200ms ease;
+      -moz-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+      transition: all 200ms ease; }
+    #timetable .week img:hover {
+      -webkit-filter: opacity(0.3); }
     #timetable .week img {
       cursor: pointer; }
     #timetable .week img.disabled {
@@ -147,6 +174,8 @@ header {
       #timetable .foodOptions div.foodOptionsContent {
         padding-top: 10px;
         float: right; } }
+    #timetable .foodOptions div.foodOptionsContent p {
+      color: #a5a5a5; }
   #timetable .foodOptions ul {
     display: flex;
     list-style-type: none;
@@ -156,98 +185,107 @@ header {
       padding-left: 0; }
     #timetable .foodOptions ul li {
       padding-left: 10px; }
+      #timetable .foodOptions ul li img.foodIcons {
+        -webkit-transition: all 0.8s ease;
+        -moz-transition: all 0.8s ease;
+        -o-transition: all 0.8s ease;
+        -ms-transition: all 0.8s ease;
+        transition: all 0.8s ease; }
+      #timetable .foodOptions ul li img:hover {
+        -webkit-transform: rotate(360deg);
+        -moz-transform: rotate(360deg);
+        -o-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+        transform: rotate(360deg); }
 
-#mealPlan .tablePlaceHolder {
-  overflow-x: auto; }
-  #mealPlan .tablePlaceHolder tr.workoutTr, #mealPlan .tablePlaceHolder td.dietTypeCell {
-    height: 35px; }
-    #mealPlan .tablePlaceHolder tr.workoutTr img.workoutDone, #mealPlan .tablePlaceHolder td.dietTypeCell img.workoutDone {
-      margin-left: 10px; }
-  #mealPlan .tablePlaceHolder td.workoutToDo {
-    border-top: 2px solid #d7d7d7; }
-  #mealPlan .tablePlaceHolder td.workoutToDo, #mealPlan .tablePlaceHolder td.dietTypeCell {
-    border-right: 2px solid #d7d7d7; }
-  #mealPlan .tablePlaceHolder span.timeTable, #mealPlan .tablePlaceHolder span.workout, #mealPlan .tablePlaceHolder td.dietTypeCell {
-    color: #828282;
-    font-size: 11px;
-    font-weight: bold; }
-  #mealPlan .tablePlaceHolder span.workout {
-    margin: 11px 5px; }
-  #mealPlan .tablePlaceHolder .tableHeaderDay {
-    font-size: 17px;
-    color: #adbb0c;
-    padding: 17px 0; }
-  #mealPlan .tablePlaceHolder td.meal-cell {
-    position: relative; }
-    #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer {
-      min-height: 90px;
-      margin: 13px 23px 0 13px;
-      text-align: left; }
-      #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer span.cellDataMeal {
-        font-size: 13px;
-        line-height: 1.4;
-        padding-right: 10px;
-        font-family: arial;
-        color: #828282;
-        text-align: left; }
-      #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer img.was-eaten {
-        position: absolute;
-        top: 13px;
-        right: 8px; }
-      #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer img.shakePicture {
-        margin: 16px 0 0 8px; }
-
-#mealPlan table, #mealPlan tr, #mealPlan th, #mealPlan td {
-  border-collapse: collapse;
-  text-align: center; }
-
-#mealPlan th, #mealPlan td {
-  border-top: 2px solid #e9e9e9;
-  border-right: 2px solid #e9e9e9; }
-
-#mealPlan th {
-  min-width: 120px; }
-
-#mealPlan th:first-child {
-  min-width: 80px; }
-
-#mealPlan tr:first-child > th,
-#mealPlan tr:first-child > td {
-  border-top: 0; }
-
-#mealPlan tr > th:first-child,
-#mealPlan tr > td:first-child {
-  border-color: #d7d7d7;
-  border-right: 0; }
-
-#mealPlan tr > th:last-child,
-#mealPlan tr > td:last-child {
-  border-right: 0;
-  border-left: 2px solid #e9e9e9; }
-
-#mealPlan tr > th:first-child,
-#mealPlan tr > td:first-child,
-#mealPlan tr:last-child > td,
-#mealPlan tr:nth-last-child(2) > td {
-  background: url("../../images/table_background.png") repeat; }
-
-#mealPlan tr:nth-last-child(2) > td {
-  border-top: 0; }
-
-#mealPlan tr:nth-last-child(2) > td:first-child {
-  border-right: 0; }
-
-#mealPlan tr > td.selectedYesterday,
-#mealPlan tr > th.selectedYesterday,
-#mealPlan tr > td.selected,
-#mealPlan tr > th.selected {
-  border-right-color: #ff801a; }
-
-#mealPlan tr > th.selected {
-  border-top: 2px solid #ff801a; }
-
-#mealPlan tr:last-child > td.selected {
-  border-bottom: 2px solid #ff801a; }
+main {
+  background-color: #f9f9f9; }
+  main #mealPlan .tablePlaceHolder {
+    overflow-x: auto;
+    background-color: white; }
+    main #mealPlan .tablePlaceHolder tr.workoutTr, main #mealPlan .tablePlaceHolder td.dietTypeCell {
+      height: 35px; }
+      main #mealPlan .tablePlaceHolder tr.workoutTr img.workoutDone, main #mealPlan .tablePlaceHolder td.dietTypeCell img.workoutDone {
+        margin-left: 10px; }
+    main #mealPlan .tablePlaceHolder td.meal-cell.selected div.cellDataContainer span.cellDataMeal {
+      color: black; }
+    main #mealPlan .tablePlaceHolder td.workoutToDo {
+      border-top: 2px solid #d7d7d7; }
+    main #mealPlan .tablePlaceHolder td.workoutToDo, main #mealPlan .tablePlaceHolder td.dietTypeCell {
+      border-right: 2px solid #d7d7d7; }
+    main #mealPlan .tablePlaceHolder span.timeTable, main #mealPlan .tablePlaceHolder span.workout, main #mealPlan .tablePlaceHolder td.dietTypeCell {
+      color: #828282;
+      font-size: 11px;
+      font-weight: bold; }
+    main #mealPlan .tablePlaceHolder span.workout {
+      margin: 11px 5px; }
+    main #mealPlan .tablePlaceHolder span.print {
+      margin-left: 7px;
+      color: #828282; }
+    main #mealPlan .tablePlaceHolder .tableHeaderDay {
+      font-size: 17px;
+      color: #adbb0c;
+      padding: 17px 0; }
+    main #mealPlan .tablePlaceHolder .tableHeaderDay.selected {
+      color: #ff801a; }
+    main #mealPlan .tablePlaceHolder td.meal-cell {
+      position: relative; }
+      main #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer {
+        min-height: 90px;
+        margin: 13px 23px 0 13px;
+        text-align: left;
+        max-width: 120px; }
+        main #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer span.cellDataMeal {
+          font-size: 13px;
+          line-height: 1.4;
+          padding-right: 10px;
+          color: #828282;
+          text-align: left; }
+        main #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer img.was-eaten {
+          position: absolute;
+          top: 13px;
+          right: 8px; }
+        main #mealPlan .tablePlaceHolder td.meal-cell div.cellDataContainer img.shakePicture {
+          margin: 16px 0 0 8px; }
+  main #mealPlan table, main #mealPlan tr, main #mealPlan th, main #mealPlan td {
+    border-collapse: collapse;
+    text-align: center; }
+  main #mealPlan th, main #mealPlan td {
+    border-top: 2px solid #e9e9e9;
+    border-right: 2px solid #e9e9e9; }
+  main #mealPlan th {
+    min-width: 120px; }
+  main #mealPlan th:first-child {
+    min-width: 80px; }
+  main #mealPlan tr:first-child > th,
+  main #mealPlan tr:first-child > td {
+    border-top: 0; }
+  main #mealPlan tr > th:first-child,
+  main #mealPlan tr > td:first-child {
+    border-color: #d7d7d7;
+    border-right: 0; }
+  main #mealPlan tr > th:last-child,
+  main #mealPlan tr > td:last-child {
+    border-right: 0;
+    border-left: 2px solid #e9e9e9; }
+  main #mealPlan tr > th:first-child,
+  main #mealPlan tr > td:first-child,
+  main #mealPlan tr:last-child > td,
+  main #mealPlan tr:nth-last-child(2) > td {
+    background: url("../../images/table_background.png") repeat; }
+  main #mealPlan tr:nth-last-child(2) > td {
+    border-top: 0; }
+  main #mealPlan tr:nth-last-child(2) > td:first-child {
+    border-right: 0; }
+  main #mealPlan tr > td.selectedYesterday,
+  main #mealPlan tr > th.selectedYesterday,
+  main #mealPlan tr > td.selected,
+  main #mealPlan tr > th.selected {
+    border-right: 2px solid #ff801a !important; }
+  main #mealPlan tr > th.selected {
+    border-top: 2px solid #ff801a !important; }
+  main #mealPlan tr:last-child > td.selected {
+    border-bottom: 2px solid #ff801a !important; }
 
 .time {
   width: 85px; }
@@ -257,6 +295,51 @@ header {
   margin: auto;
   padding: 10px 0; }
 
-#bottomBoxes {
-  display: flex;
-  flex-direction: row; }
+#bottomBoxes :first-child {
+  margin-left: 0; }
+
+#bottomBoxes .mainBottom {
+  width: 28%;
+  float: left; }
+  #bottomBoxes .mainBottom h2 {
+    color: #828282;
+    font-family: myHelvetica; }
+  #bottomBoxes .mainBottom p {
+    color: #a5a5a5; }
+  @media screen and (max-width: 768px) {
+    #bottomBoxes .mainBottom {
+      width: 100%;
+      float: left;
+      display: inline-block; } }
+
+#bottomBoxes .bottomLine {
+  float: left;
+  width: 1px;
+  height: 26%;
+  background: #e1e1e1;
+  margin: 23px 30px 0 25px; }
+  @media screen and (max-width: 768px) {
+    #bottomBoxes .bottomLine {
+      margin: 20px 0;
+      height: 1px;
+      width: 100%; } }
+
+#bottomBoxes button.bottomButton {
+  border: 1px solid #bdbdbd;
+  border-radius: 3px;
+  max-height: 33px;
+  min-width: 95px;
+  background-color: white; }
+  #bottomBoxes button.bottomButton span.bottomButtonSpan {
+    font-size: 16px;
+    color: #a5a5a5;
+    padding-bottom: 1px; }
+  #bottomBoxes button.bottomButton img {
+    padding: 0 5px 5px; }
+    #bottomBoxes button.bottomButton img .bottomButton.btn.btn-light.ios {
+      margin-bottom: 5px; }
+
+div.element-menu:hover {
+  font-size: 120%;
+  text-shadow: 1px 1px;
+  cursor: pointer; }

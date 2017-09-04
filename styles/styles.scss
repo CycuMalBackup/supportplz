@@ -1,13 +1,25 @@
 $small-device-max-width: 768px;
+$padding-food-options: 10px;
 $color-orange: #ff801a;
 $color-table: #e9e9e9;
 $color-green: #b5c409;
-$padding-food-options: 10px;
+$color-header-menu-bottom-buttons: #7c7c7c;
 $color-day-green: #adbb0c;
 $color-table-data-text: #828282;
 $color-background-body: #f9f9f9;
 $color-border-darker: #d7d7d7;
+$color-bottom-border: #e1e1e1;
+$color-paragraph-buttons: #a5a5a5;
+$color-bottom-buttons: #bdbdbd;
 
+@font-face {
+  font-family: myHelvetica;
+  src: url(../../HelveticaNeueLTStd-Md.otf);
+}
+
+body{
+  background-color: $color-background-body;
+}
 .clearfix {
   clear: both;
 }
@@ -15,7 +27,7 @@ $color-border-darker: #d7d7d7;
 .container {
   margin: 0 auto;
   padding: 0 10px;
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: $small-device-max-width) {
     padding-left: 0;
     padding-right: 0;
   }
@@ -24,8 +36,9 @@ $color-border-darker: #d7d7d7;
 header {
   max-height: 79px;
   padding: 22px 0;
+  background-color:white;
+  font-family: myHelvetica;
   .menu-margin {
-
     float: left;
     margin-left: 15%;
     width: 1px;
@@ -37,6 +50,7 @@ header {
       float: left;
       margin-right: 32px;
       padding-top: 10px;
+      color: $color-header-menu-bottom-buttons;
       @media screen and (max-width: 391px) {
         margin-right: 10px;
       }
@@ -53,8 +67,8 @@ header {
       width: 25px;
       height: 2px;
       background: $color-orange;
-      margin-top: 8px;
       color: $color-orange;
+      margin:auto;
     }
   }
   .loggedIn {
@@ -64,18 +78,17 @@ header {
       font-size: 15px;
     }
     span, img.arrow {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $small-device-max-width) {
         display: none;
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $small-device-max-width) {
         display: inline;
       }
     }
-
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $small-device-max-width) {
       float: none;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $small-device-max-width) {
       float: right;
     }
     img.photoOfLogged {
@@ -87,14 +100,20 @@ header {
     }
   }
 }
-
+div.underlinedHeader {
+  background: url('../../images/underlinedHeader_03.png') repeat;
+  height: 2px;
+  width: 100%;
+}
 #timetable {
+  font-family: myHelvetica;
   padding: 33px 0;
-  @media screen and (max-width: 768px) {
+  background-color: $color-background-body;
+  @media screen and (max-width: $small-device-max-width) {
     width: 300px;
     margin: auto;
   }
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: $small-device-max-width) {
     width: auto;
   }
 
@@ -102,10 +121,11 @@ header {
     p {
       font-size: 7px;
       margin: 0 0 12px 0;
-      @media screen and (max-width: 768px) {
+      color: $color-paragraph-buttons;
+      @media screen and (max-width: $small-device-max-width) {
         margin-left: 70px;
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $small-device-max-width) {
         margin: 0 0 12px 0;
       }
     }
@@ -142,10 +162,10 @@ header {
     @media screen and (max-width: 992px) {
       padding-top: 10px;
     }
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $small-device-max-width) {
       margin-left: 25px;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $small-device-max-width) {
       margin: 0;
     }
   }
@@ -163,6 +183,18 @@ header {
       font-size: 44px;
       min-width: 230px;
       text-align: center;
+      color: $color-orange;
+    }
+    img.js-week-next, img.js-week-previous {
+      -webkit-transition: all 200ms ease;
+      -moz-transition: all 200ms ease;
+      -o-transition: all 200ms ease;
+      -ms-transition: all 200ms ease;
+      transition: all 200ms ease;
+    }
+
+    img:hover {
+      -webkit-filter: opacity(0.3);
     }
     img {
       cursor: pointer;
@@ -172,17 +204,17 @@ header {
     }
   }
   .foodOptions {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: $small-device-max-width) {
       margin-left: 55px;
     }
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: $small-device-max-width) {
       margin: 0 0 12px 0;
     }
     p {
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $small-device-max-width) {
         margin-left: 30px;
       }
-      @media screen and (min-width: 768px) {
+      @media screen and (min-width: $small-device-max-width) {
         margin: 0 0 12px 0;
       }
     }
@@ -191,13 +223,16 @@ header {
       font-size: 7px;
       margin: 0 0 12px 0;
       padding-left: $padding-food-options;
-      @media screen and (max-width: 768px) {
+      @media screen and (max-width: $small-device-max-width) {
         float: left;
         padding: 10px 0 0 0;
       }
-      @media screen and (min-width: 768px) and (max-width: 992px) {
+      @media screen and (min-width: $small-device-max-width) and (max-width: 992px) {
         padding-top: 10px;
         float: right;
+      }
+      p {
+        color: $color-paragraph-buttons;
       }
     }
     ul {
@@ -210,121 +245,150 @@ header {
       }
       li {
         padding-left: $padding-food-options;
+        img.foodIcons {
+          -webkit-transition: all 0.8s ease;
+          -moz-transition: all 0.8s ease;
+          -o-transition: all 0.8s ease;
+          -ms-transition: all 0.8s ease;
+          transition: all 0.8s ease;
+        }
+        img:hover {
+
+          -webkit-transform: rotate(360deg);
+          -moz-transform: rotate(360deg);
+          -o-transform: rotate(360deg);
+          -ms-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
       }
     }
   }
-
 }
-
-#mealPlan {
-  .tablePlaceHolder {
-    overflow-x: auto;
-    tr.workoutTr, td.dietTypeCell {
-      height: 35px;
-      img.workoutDone {
-        margin-left: 10px;
+main {
+  background-color: $color-background-body;
+  #mealPlan {
+    .tablePlaceHolder {
+      overflow-x: auto;
+      background-color:white;
+      tr.workoutTr, td.dietTypeCell {
+        height: 35px;
+        img.workoutDone {
+          margin-left: 10px;
+        }
       }
-    }
-    td.workoutToDo {
-      border-top: 2px solid $color-border-darker;
-    }
-    td.workoutToDo, td.dietTypeCell {
-      border-right: 2px solid $color-border-darker;
-    }
-    span.timeTable, span.workout,     td.dietTypeCell
-    {
-      color: $color-table-data-text;
-      font-size: 11px;
-      font-weight: bold;
-    }
-    span.workout {
-margin: 11px 5px;
-    }
-    .tableHeaderDay {
-      font-size: 17px;
-      color: $color-day-green;
-      padding: 17px 0;
-    }
+      td.meal-cell.selected {
+        div.cellDataContainer {
+          span.cellDataMeal {
+            color: black;
+          }
+        }
+      }
+      td.workoutToDo {
+        border-top: 2px solid $color-border-darker;
+      }
+      td.workoutToDo, td.dietTypeCell {
+        border-right: 2px solid $color-border-darker;
+      }
+      span.timeTable, span.workout, td.dietTypeCell {
+        color: $color-table-data-text;
+        font-size: 11px;
+        font-weight: bold;
+      }
+      span.workout {
+        margin: 11px 5px;
+      }
+      span.print {
+        margin-left: 7px;
+        color: $color-table-data-text;
+      }
+      .tableHeaderDay {
+        font-size: 17px;
+        color: $color-day-green;
+        padding: 17px 0;
+      }
+      .tableHeaderDay.selected {
+        color: $color-orange;
+      }
 
-    td.meal-cell {
-      position: relative;
-      div.cellDataContainer {
-        min-height: 90px;
-        margin: 13px 23px 0 13px;
-        text-align: left;
-
-        span.cellDataMeal {
-          font-size: 13px;
-          line-height: 1.4;
-          padding-right: $padding-food-options;
-          font-family: arial;
-          color: $color-table-data-text;
+      td.meal-cell {
+        position: relative;
+        div.cellDataContainer {
+          min-height: 90px;
+          margin: 13px 23px 0 13px;
           text-align: left;
-        }
-        img.was-eaten {
-          position: absolute;
-          top: 13px;
-          right: 8px;
-        }
-        img.shakePicture {
-          margin: 16px 0 0 8px;
+          max-width: 120px;
+          span.cellDataMeal {
+            font-size: 13px;
+            line-height: 1.4;
+            padding-right: $padding-food-options;
+            color: $color-table-data-text;
+            text-align: left;
+          }
+          img.was-eaten {
+            position: absolute;
+            top: 13px;
+            right: 8px;
+          }
+          img.shakePicture {
+            margin: 16px 0 0 8px;
+          }
         }
       }
     }
+    table, tr, th, td {
+      border-collapse: collapse;
+      text-align: center;
+    }
+    th, td {
+      border-top: 2px solid $color-table;
+      border-right: 2px solid $color-table;
+    }
+    th {
+      min-width: 120px;
+    }
+    th:first-child {
+      min-width: 80px;
+    }
+    tr:first-child > th,
+    tr:first-child > td {
+      border-top: 0;
+    }
+    tr > th:first-child,
+    tr > td:first-child {
+      border-color: $color-border-darker;
+      border-right: 0;
+    }
+    tr > th:last-child,
+    tr > td:last-child {
+      border-right: 0;
+      border-left: 2px solid $color-table;
+    }
+    tr > th:first-child,
+    tr > td:first-child,
+    tr:last-child > td,
+    tr:nth-last-child(2) > td {
+      background: url('../../images/table_background.png') repeat;
+    }
+    tr:nth-last-child(2) > td {
+      border-top: 0;
+    }
+    tr:nth-last-child(2) > td:first-child {
+      border-right: 0;
+    }
+    tr > td.selectedYesterday,
+    tr > th.selectedYesterday,
+    tr > td.selected,
+    tr > th.selected {
+      border-right: 2px solid $color-orange !important;
+    }
+    tr > th.selected {
+      border-top: 2px solid $color-orange !important;
+    }
+    tr:last-child > td.selected {
+      border-bottom: 2px solid $color-orange !important;
+    }
   }
-  table, tr, th, td {
-    border-collapse: collapse;
-    text-align: center;
-  }
-  th, td {
-    border-top: 2px solid $color-table;
-    border-right: 2px solid $color-table;
-  }
-  th {
-    min-width: 120px;
-  }
-  th:first-child {
-    min-width: 80px;
-  }
-  tr:first-child > th,
-  tr:first-child > td {
-    border-top: 0;
-  }
-  tr > th:first-child,
-  tr > td:first-child {
-    border-color: $color-border-darker;
-    border-right: 0;
-  }
-  tr > th:last-child,
-  tr > td:last-child {
-    border-right: 0;
-    border-left: 2px solid $color-table;
-  }
-  tr > th:first-child,
-  tr > td:first-child,
-  tr:last-child > td,
-  tr:nth-last-child(2) > td {
-    background: url('../../images/table_background.png') repeat;
-  }
-  tr:nth-last-child(2) > td {
-    border-top: 0;
-  }
-  tr:nth-last-child(2) > td:first-child {
-    border-right: 0;
-  }
-  // HAX jak nic -.-
-  tr > td.selectedYesterday,
-  tr > th.selectedYesterday,
-  tr > td.selected,
-  tr > th.selected {
-    border-right-color: $color-orange;
-  }
-  tr > th.selected {
-    border-top: 2px solid $color-orange;
-  }
-  tr:last-child > td.selected {
-    border-bottom: 2px solid $color-orange;
-  }
+
 }
 
 .time {
@@ -340,6 +404,61 @@ margin: 11px 5px;
 }
 
 #bottomBoxes {
-  display: flex;
-  flex-direction: row;
+
+  :first-child {
+    margin-left: 0;
+  }
+  .mainBottom {
+    width: 28%;
+    float: left;
+    h2 {
+      color: $color-table-data-text;
+      font-family: myHelvetica;
+    }
+    p {
+      color: $color-paragraph-buttons;
+    }
+    @media screen and (max-width: $small-device-max-width) {
+      width: 100%;
+      float: left;
+      display: inline-block;
+    }
+  }
+  .bottomLine {
+    float:left;
+    width: 1px;
+    height: 26%;
+    background: $color-bottom-border;
+    margin: 23px 30px 0 25px;
+    @media screen and (max-width: $small-device-max-width) {
+      margin: 20px 0;
+      height: 1px;
+      width: 100%;
+    }
+  }
+  button.bottomButton {
+    border: 1px solid $color-bottom-buttons;
+    border-radius: 3px;
+    max-height: 33px;
+    min-width: 95px;
+    background-color: white;
+    span.bottomButtonSpan {
+      font-size: 16px;
+      color: $color-paragraph-buttons;
+      padding-bottom: 1px;
+    }
+    img {
+      padding: 0 5px 5px;
+      .bottomButton.btn.btn-light.ios {
+        margin-bottom: 5px;
+      }
+    }
+  }
 }
+div.element-menu:hover {
+  font-size: 120%;
+  text-shadow: 1px 1px;
+  cursor: pointer;
+}
+
+
