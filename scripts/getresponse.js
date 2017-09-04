@@ -19,7 +19,7 @@ window.onload = function () {
 
     var displayTable = function () {
         var tableDisplayed = buildTable();
-        var tablePlaceHolder = document.getElementsByClassName("tablePlaceHolder")[0];
+        var tablePlaceHolder = document.getElementsByClassName("table-place-holder")[0];
         tablePlaceHolder.innerHTML = tableDisplayed;
     };
 
@@ -27,7 +27,7 @@ window.onload = function () {
         var tableHeader = "<tr>";
         tableHeader += "<th class='" + getClassForSelectedCell(0) + "'></th>";
         for (var dayNumber = 1; dayNumber <= 7 ; dayNumber++) {
-            tableHeader += "<th class='tableHeaderDay " + getClassForSelectedCell(dayNumber) + "'>DAY <span class=\"week-day-number\">" + firstDayOfTheWeek++ + "</span></th>";
+            tableHeader += "<th class='table-header-day " + getClassForSelectedCell(dayNumber) + "'>DAY <span class='week-day-number'>" + firstDayOfTheWeek++ + "</span></th>";
         }
         tableHeader += "</tr>";
         return tableHeader;
@@ -35,7 +35,7 @@ window.onload = function () {
 
     var getClassForSelectedCell = function(dayNumber) {
         if(dayNumber === selectedDay - 1){
-            return "selectedYesterday";
+            return "selected-yesterday";
         } else if(dayNumber === selectedDay) {
             return "selected";
         } else {
@@ -54,7 +54,7 @@ window.onload = function () {
     };
 
     var getMealsByHour = function (hour, hourId) {
-        var mealsByHours = "<td class='" + getClassForSelectedCell(0) + "'><span class='timeTable'>" + hour + "</span></td>";
+        var mealsByHours = "<td class='" + getClassForSelectedCell(0) + "'><span class='time-table'>" + hour + "</span></td>";
         for (var i = 0; i < mealPlan.length; i++) {
             var dayPlan = mealPlan[i],
                 hourSpecificMeal = dayPlan.meals[hourId];
@@ -73,17 +73,17 @@ window.onload = function () {
             wasEaten = hourSpecificMeal.eaten,
             mealName = hourSpecificMeal.meal;
 
-        var mealHtml = "<td class='meal-cell " + getClassForSelectedCell(currentDay) + "'><div class='cellDataContainer'>";
+        var mealHtml = "<td class='meal-cell " + getClassForSelectedCell(currentDay) + "'><div class='cell-data-container'>";
 
         if (wasEaten === true) {
             mealHtml += "<img class='was-eaten' src='./images/mealEaten.png' alt='tick'>";
         }
-        mealHtml += "<span class='cellDataMeal'>" + mealName + "</span>";
+        mealHtml += "<span class='cell-data-meal'>" + mealName + "</span>";
         if (mealId === 1) {
             if (currentDay === selectedDay) {
-                mealHtml += "<img class='shakePicture' src=\"./images/todaysShake.png\" alt=\"shake\">";
+                mealHtml += "<img class='shake-picture' src=\"./images/todaysShake.png\" alt=\"shake\">";
             } else {
-                mealHtml += "<img class='shakePicture' src=\"./images/shake.png\" alt=\"shake\">";
+                mealHtml += "<img class='shake-picture' src=\"./images/shake.png\" alt=\"shake\">";
             }
         }
         mealHtml += "</div></td>";
@@ -91,7 +91,7 @@ window.onload = function () {
     };
 
     var getDietType = function () {
-        var dietType = "<tr class='dietTypeTr'>";
+        var dietType = "<tr class='diet-type-tr'>";
         dietType = "<td class='" + getClassForSelectedCell(0) + "'></td>";
         for (var i = 0; i < mealPlan.length; i++) {
             var dailyMealPlan = mealPlan[i];
@@ -99,7 +99,7 @@ window.onload = function () {
             if (dailyMealPlan.dietType === guiltFree) {
                 dietType += "<td rowspan=\"2\" class='" + classForSelectedCell + "'><img src=\"./images/print.png\" alt=\"print\"/><span class='print'>Print</span></td>";
             } else {
-                dietType += "<td class='dietTypeCell " + classForSelectedCell + "'>" + dailyMealPlan.dietType + "</td>";
+                dietType += "<td class='diet-type-cell " + classForSelectedCell + "'>" + dailyMealPlan.dietType + "</td>";
             }
         }
         dietType += "</tr>";
@@ -107,7 +107,7 @@ window.onload = function () {
     };
 
     var getWorkoutData = function () {
-        var workout = "<tr class='workoutTr'>";
+        var workout = "<tr class='workout-tr'>";
         workout += "<td class='" + getClassForSelectedCell(0) + "'><span class='workout'>Workout</span><img src='./images/workoutArrow.png' alt='arrow'></td>";
         for (var i = 0; i < mealPlan.length; i++) {
             var dailyWorkout = mealPlan[i];
@@ -115,17 +115,17 @@ window.onload = function () {
                 var classForSelectedCell = getClassForSelectedCell(dailyWorkout.day);
                 if(dailyWorkout.workoutToDo === true && dailyWorkout.workoutDone === true) {
                     workout +=
-                        "<td class='workoutToDo " + classForSelectedCell +  "'>" +
+                        "<td class='workout-to-do " + classForSelectedCell +  "'>" +
                         "<img src='./images/workoutDone.png' alt='workoutDone'>" +
-                        "<img class='workoutDone' src='./images/workoutDoneTick.png' alt='tick'>" +
+                        "<img class='workout-done' src='./images/workoutDoneTick.png' alt='tick'>" +
                         "</td>";
                 } else if (dailyWorkout.workoutToDo === true && dailyWorkout.workoutDone === false) {
                     workout +=
-                        "<td class='workoutToDo " + classForSelectedCell + "'>" +
+                        "<td class='workout-to-do " + classForSelectedCell + "'>" +
                         "<img src='./images/workout.png' alt='workoutToDo'>" +
                         "</td>";
                 } else {
-                    workout += "<td class='workoutToDo " + classForSelectedCell + "'>" + dailyWorkout.workoutToDo + "</td>";
+                    workout += "<td class='workout-to-do " + classForSelectedCell + "'>" + dailyWorkout.workoutToDo + "</td>";
                 }
             }
         }
@@ -135,7 +135,7 @@ window.onload = function () {
 
     var getGuiltFreeDayTemplateHtml = function () {
         var guiltFreeDay =
-            "<td class=\"guiltFreeDay\" rowspan=\"5\"><img src=\"./images/guiltfreeday.png\" alt=\"guilt_free_day\">" +
+            "<td class='guilt-free-day' rowspan=\"5\"><img src=\"./images/guiltfreeday.png\" alt=\"guilt_free_day\">" +
             "<img src=\"./images/smile.png\" alt=\"smile\"></td>";
         return guiltFreeDay;
     };

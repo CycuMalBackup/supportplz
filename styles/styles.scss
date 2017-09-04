@@ -71,7 +71,7 @@ header {
       margin:auto;
     }
   }
-  .loggedIn {
+  .logged-in {
     float: right;
     img, span {
       padding-left: 10px;
@@ -91,7 +91,7 @@ header {
     @media screen and (min-width: $small-device-max-width) {
       float: right;
     }
-    img.photoOfLogged {
+    img.photo-of-logged {
       @media screen and (max-width: 570px) {
         position: absolute;
         top: 10px;
@@ -100,7 +100,7 @@ header {
     }
   }
 }
-div.underlinedHeader {
+div.underlined-header {
   background: url('../../images/underlinedHeader_03.png') repeat;
   height: 2px;
   width: 100%;
@@ -117,7 +117,7 @@ div.underlinedHeader {
     width: auto;
   }
 
-  .progressBar {
+  .progress-bar {
     p {
       font-size: 7px;
       margin: 0 0 12px 0;
@@ -135,13 +135,13 @@ div.underlinedHeader {
         height: 10px;
         margin-bottom: 8px;
       }
-      .weekItem {
+      .week-item {
         float: left;
         span {
           font-size: 7px;
           margin-left: 12px;
         }
-        .firstSpan {
+        .first-span {
           margin-left: 3px;
         }
         .first {
@@ -203,7 +203,7 @@ div.underlinedHeader {
       display: none;
     }
   }
-  .foodOptions {
+  .food-options {
     @media screen and (max-width: $small-device-max-width) {
       margin-left: 55px;
     }
@@ -218,7 +218,7 @@ div.underlinedHeader {
         margin: 0 0 12px 0;
       }
     }
-    div.foodOptionsContent {
+    div.food-options-content {
       float: right;
       font-size: 7px;
       margin: 0 0 12px 0;
@@ -245,7 +245,7 @@ div.underlinedHeader {
       }
       li {
         padding-left: $padding-food-options;
-        img.foodIcons {
+        img.food-icons {
           -webkit-transition: all 0.8s ease;
           -moz-transition: all 0.8s ease;
           -o-transition: all 0.8s ease;
@@ -266,30 +266,30 @@ div.underlinedHeader {
 }
 main {
   background-color: $color-background-body;
-  #mealPlan {
-    .tablePlaceHolder {
+  #meal-plan {
+    .table-place-holder {
       overflow-x: auto;
       background-color:white;
-      tr.workoutTr, td.dietTypeCell {
+      tr.workout-tr, td.diet-type-cell {
         height: 35px;
-        img.workoutDone {
+        img.workout-done {
           margin-left: 10px;
         }
       }
       td.meal-cell.selected {
-        div.cellDataContainer {
-          span.cellDataMeal {
+        div.cell-data-container {
+          span.cell-data-meal {
             color: black;
           }
         }
       }
-      td.workoutToDo {
+      td.workout-to-do {
         border-top: 2px solid $color-border-darker;
       }
-      td.workoutToDo, td.dietTypeCell {
+      td.workout-to-do, td.diet-type-cell {
         border-right: 2px solid $color-border-darker;
       }
-      span.timeTable, span.workout, td.dietTypeCell {
+      span.time-table, span.workout, td.diet-type-cell {
         color: $color-table-data-text;
         font-size: 11px;
         font-weight: bold;
@@ -301,23 +301,23 @@ main {
         margin-left: 7px;
         color: $color-table-data-text;
       }
-      .tableHeaderDay {
+      .table-header-day {
         font-size: 17px;
         color: $color-day-green;
         padding: 17px 0;
       }
-      .tableHeaderDay.selected {
+      .table-header-day.selected {
         color: $color-orange;
       }
 
       td.meal-cell {
         position: relative;
-        div.cellDataContainer {
+        div.cell-data-container {
           min-height: 90px;
           margin: 13px 23px 0 13px;
           text-align: left;
           max-width: 120px;
-          span.cellDataMeal {
+          span.cell-data-meal {
             font-size: 13px;
             line-height: 1.4;
             padding-right: $padding-food-options;
@@ -329,7 +329,7 @@ main {
             top: 13px;
             right: 8px;
           }
-          img.shakePicture {
+          img.shake-picture {
             margin: 16px 0 0 8px;
           }
         }
@@ -375,8 +375,8 @@ main {
     tr:nth-last-child(2) > td:first-child {
       border-right: 0;
     }
-    tr > td.selectedYesterday,
-    tr > th.selectedYesterday,
+    tr > td.selected-yesterday,
+    tr > th.selected-yesterday,
     tr > td.selected,
     tr > th.selected {
       border-right: 2px solid $color-orange !important;
@@ -395,7 +395,7 @@ main {
   width: 85px;
 }
 
-.guiltFreeDay {
+.guilt-free-day {
   img {
     display: block;
     margin: auto;
@@ -403,12 +403,12 @@ main {
   }
 }
 
-#bottomBoxes {
+#bottom-boxes {
 
   :first-child {
     margin-left: 0;
   }
-  .mainBottom {
+  .main-bottom {
     width: 28%;
     float: left;
     h2 {
@@ -424,7 +424,7 @@ main {
       display: inline-block;
     }
   }
-  .bottomLine {
+  .bottom-line {
     float:left;
     width: 1px;
     height: 26%;
@@ -436,20 +436,20 @@ main {
       width: 100%;
     }
   }
-  button.bottomButton {
+  button.bottom-button {
     border: 1px solid $color-bottom-buttons;
     border-radius: 3px;
     max-height: 33px;
     min-width: 95px;
     background-color: white;
-    span.bottomButtonSpan {
+    span.bottom-button-span {
       font-size: 16px;
       color: $color-paragraph-buttons;
       padding-bottom: 1px;
     }
     img {
       padding: 0 5px 5px;
-      .bottomButton.btn.btn-light.ios {
+      .bottom-button.btn.btn-light.ios {
         margin-bottom: 5px;
       }
     }
