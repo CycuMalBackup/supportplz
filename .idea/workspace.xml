@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3f080b83-ffbc-4b70-bcdc-e29bca2e5088" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/css/styles.css" afterPath="$PROJECT_DIR$/styles/css/styles.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/styles/styles.scss" afterPath="$PROJECT_DIR$/styles/styles.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/mealPlan.json" afterPath="$PROJECT_DIR$/data/mealPlan.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/scripts/getresponse.js" afterPath="$PROJECT_DIR$/scripts/getresponse.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -64,45 +64,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="getresponse.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="getresponse.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/scripts/getresponse.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1386">
-              <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-              <folding>
-                <marker date="1504527576889" expanded="true" signature="28:7352" ph="{...}" />
-                <marker date="1504527576889" expanded="true" signature="6700:6896" ph="{...}" />
-                <marker date="1504527576889" expanded="true" signature="6759:6861" ph="{...}" />
-                <marker date="1504527576889" expanded="true" signature="6941:6990" ph="{...}" />
-                <marker date="1504527576889" expanded="true" signature="7064:7172" ph="{...}" />
-                <marker date="1504527576889" expanded="true" signature="7095:7166" ph="{...}" />
-                <marker date="1504527576889" expanded="true" signature="7215:7329" ph="{...}" />
-                <marker date="1504527576889" expanded="true" signature="7252:7323" ph="{...}" />
-                <marker date="1504527576889" expanded="true" signature="7370:11373" ph="[...]" />
-                <marker date="1504527576889" expanded="true" signature="7376:8000" ph="{&quot;dietType&quot;: &quot;LOW-CARB&quot;...}" />
-                <marker date="1504527576889" expanded="true" signature="7507:7994" ph="[...]" />
-                <marker date="1504527576889" expanded="true" signature="8006:8634" ph="{&quot;dietType&quot;: &quot;LOW-CARB&quot;...}" />
-                <marker date="1504527576889" expanded="true" signature="8137:8628" ph="[...]" />
-                <marker date="1504527576889" expanded="true" signature="8640:9293" ph="{&quot;dietType&quot;: &quot;HIGH-CARB&quot;...}" />
-                <marker date="1504527576889" expanded="true" signature="8773:9287" ph="[...]" />
-                <marker date="1504527576889" expanded="true" signature="9299:9928" ph="{&quot;dietType&quot;: &quot;LOW-CARB&quot;...}" />
-                <marker date="1504527576889" expanded="true" signature="9431:9922" ph="[...]" />
-                <marker date="1504527576889" expanded="true" signature="9934:10563" ph="{&quot;dietType&quot;: &quot;LOW-CARB&quot;...}" />
-                <marker date="1504527576889" expanded="true" signature="10066:10557" ph="[...]" />
-                <marker date="1504527576889" expanded="true" signature="10569:11222" ph="{&quot;dietType&quot;: &quot;HIGH-CARB&quot;...}" />
-                <marker date="1504527576889" expanded="true" signature="10702:11216" ph="[...]" />
-                <marker date="1504527576889" expanded="true" signature="11228:11371" ph="{&quot;workoutToDo&quot;: &quot;false&quot;...}" />
-                <marker date="1504527576889" expanded="true" signature="11392:11470" ph="[...]" />
-              </folding>
+            <state relative-caret-position="327">
+              <caret line="266" column="27" lean-forward="false" selection-start-line="266" selection-start-column="27" selection-end-line="266" selection-end-column="27" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="true">
+      <file leaf-file-name="styles.scss" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/styles/styles.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
+            <state relative-caret-position="568">
               <caret line="439" column="43" lean-forward="false" selection-start-line="439" selection-start-column="43" selection-end-line="439" selection-end-column="43" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="mealPlan.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/mealPlan.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="345">
+              <caret line="81" column="15" lean-forward="false" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
               <folding />
             </state>
           </provider>
@@ -121,7 +107,11 @@
     <findStrings>
       <find>var getLowCarbDayTemplateHtml \= function\(dayNumber\) \{\n        var lowCarbDay \=\n            \&quot;\&lt;tr\&gt;\&lt;th\&gt;DAY \&lt;span class\=\\\&quot;week\-day\-number\\\&quot;\&gt;\&quot; \+ dayNumber \+ \&quot;\&lt;\/span\&gt;\&lt;\/th\&gt;\&lt;\/tr\&gt;\&quot; \+\n            \&quot;\&lt;tr\&gt;\&lt;td\&gt;Bod\•ē Shake \&lt;img class\=\'was\-eaten\' src\=\'\.\.\/images\/mealEaten\.png\' alt\=\'tick\'\&gt;\&lt;span class\=\'shake\-img\'\&gt;\&lt;\/span\&gt;\&lt;\/td\&gt;\&lt;\/tr\&gt;\&quot; \+\n            \&quot;\&lt;tr\&gt;\&lt;td\&gt;Ham and Swiss Roll Ups\&lt;img class\=\'was\-eaten\' src\=\'\.\.\/images\/mealEaten\.png\' alt\=\'tick\'\&gt;\&lt;\/td\&gt;\&lt;\/tr\&gt;\&quot; \+\n            \&quot;\&lt;tr\&gt;\&lt;td\&gt;Turkey Melt\&lt;img class\=\'was\-eaten\' src\=\'\.\.\/images\/mealEaten\.png\' alt\=\'tick\'\&gt;\&lt;\/td\&gt;\&lt;\/tr\&gt;\&quot; \+\n            \&quot;\&lt;tr\&gt;\&lt;td\&gt;Bod\•ē Burn with Mozzarella and Tomato Slices\&lt;img class\=\'was\-eaten\' src\=\'\.\.\/images\/mealEaten\.png\' alt\=\'tick\'\&gt;\&lt;\/td\&gt;\&lt;\/tr\&gt;\&quot; \+\n            \&quot;\&lt;tr\&gt;\&lt;td\&gt;Turkey Melt\&lt;\/td\&gt;\&lt;\/tr\&gt;\&quot; \+\n            \&quot;\&lt;tr\&gt;\&lt;td\&gt;LOW\-CARB\&lt;\/td\&gt;\&lt;\/tr\&gt;\&quot; \+\n            \&quot;\&lt;tr\&gt;\&lt;td\&gt;\&lt;span class\=\'workout\-done\'\&gt;\&lt;\/span\&gt;\&lt;\/td\&gt;\&lt;\/tr\&gt;\&quot;\;\n        return lowCarbDay\;</find>
       <find>was-eaten</find>
+      <find>&quot;true&quot;</find>
     </findStrings>
+    <replaceStrings>
+      <replace>true</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -142,12 +132,12 @@
         <option value="$PROJECT_DIR$/mealPlan.json" />
         <option value="$PROJECT_DIR$/js/getresponse.js" />
         <option value="$USER_HOME$/Desktop/dupa.html" />
-        <option value="$PROJECT_DIR$/data/mealPlan.json" />
         <option value="$PROJECT_DIR$/Gulpfile.js" />
         <option value="$PROJECT_DIR$/.gitignore" />
-        <option value="$PROJECT_DIR$/scripts/getresponse.js" />
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/styles/styles.scss" />
+        <option value="$PROJECT_DIR$/data/mealPlan.json" />
+        <option value="$PROJECT_DIR$/scripts/getresponse.js" />
       </list>
     </option>
   </component>
@@ -192,6 +182,16 @@
             <path>
               <item name="getResponseTask" type="b2602c69:ProjectViewProjectNode" />
               <item name="getResponseTask" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="getResponseTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="getResponseTask" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="getResponseTask" type="b2602c69:ProjectViewProjectNode" />
+              <item name="getResponseTask" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="getResponseTask" type="b2602c69:ProjectViewProjectNode" />
@@ -263,20 +263,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="162359000" />
+    <option name="totallyTimeSpent" value="162854000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20571126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20571126" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33254716" sideWeight="0.50185084" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900944" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.17924528" sideWeight="0.49814913" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.33254716" sideWeight="0.49814913" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2370283" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2370283" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -832,8 +832,9 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/mealPlan.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="21" column="82" lean-forward="false" selection-start-line="21" selection-start-column="82" selection-end-line="21" selection-end-column="82" />
+        <state relative-caret-position="345">
+          <caret line="81" column="15" lean-forward="false" selection-start-line="81" selection-start-column="15" selection-end-line="81" selection-end-column="15" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -907,42 +908,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/scripts/getresponse.js">
+    <entry file="file://$PROJECT_DIR$/styles/styles.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1386">
-          <caret line="69" column="0" lean-forward="true" selection-start-line="69" selection-start-column="0" selection-end-line="69" selection-end-column="0" />
-          <folding>
-            <marker date="1504527576889" expanded="true" signature="28:7352" ph="{...}" />
-            <marker date="1504527576889" expanded="true" signature="6700:6896" ph="{...}" />
-            <marker date="1504527576889" expanded="true" signature="6759:6861" ph="{...}" />
-            <marker date="1504527576889" expanded="true" signature="6941:6990" ph="{...}" />
-            <marker date="1504527576889" expanded="true" signature="7064:7172" ph="{...}" />
-            <marker date="1504527576889" expanded="true" signature="7095:7166" ph="{...}" />
-            <marker date="1504527576889" expanded="true" signature="7215:7329" ph="{...}" />
-            <marker date="1504527576889" expanded="true" signature="7252:7323" ph="{...}" />
-            <marker date="1504527576889" expanded="true" signature="7370:11373" ph="[...]" />
-            <marker date="1504527576889" expanded="true" signature="7376:8000" ph="{&quot;dietType&quot;: &quot;LOW-CARB&quot;...}" />
-            <marker date="1504527576889" expanded="true" signature="7507:7994" ph="[...]" />
-            <marker date="1504527576889" expanded="true" signature="8006:8634" ph="{&quot;dietType&quot;: &quot;LOW-CARB&quot;...}" />
-            <marker date="1504527576889" expanded="true" signature="8137:8628" ph="[...]" />
-            <marker date="1504527576889" expanded="true" signature="8640:9293" ph="{&quot;dietType&quot;: &quot;HIGH-CARB&quot;...}" />
-            <marker date="1504527576889" expanded="true" signature="8773:9287" ph="[...]" />
-            <marker date="1504527576889" expanded="true" signature="9299:9928" ph="{&quot;dietType&quot;: &quot;LOW-CARB&quot;...}" />
-            <marker date="1504527576889" expanded="true" signature="9431:9922" ph="[...]" />
-            <marker date="1504527576889" expanded="true" signature="9934:10563" ph="{&quot;dietType&quot;: &quot;LOW-CARB&quot;...}" />
-            <marker date="1504527576889" expanded="true" signature="10066:10557" ph="[...]" />
-            <marker date="1504527576889" expanded="true" signature="10569:11222" ph="{&quot;dietType&quot;: &quot;HIGH-CARB&quot;...}" />
-            <marker date="1504527576889" expanded="true" signature="10702:11216" ph="[...]" />
-            <marker date="1504527576889" expanded="true" signature="11228:11371" ph="{&quot;workoutToDo&quot;: &quot;false&quot;...}" />
-            <marker date="1504527576889" expanded="true" signature="11392:11470" ph="[...]" />
-          </folding>
+        <state relative-caret-position="568">
+          <caret line="439" column="43" lean-forward="false" selection-start-line="439" selection-start-column="43" selection-end-line="439" selection-end-column="43" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/styles/styles.scss">
+    <entry file="file://$PROJECT_DIR$/scripts/getresponse.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="439" column="43" lean-forward="false" selection-start-line="439" selection-start-column="43" selection-end-line="439" selection-end-column="43" />
+        <state relative-caret-position="327">
+          <caret line="266" column="27" lean-forward="false" selection-start-line="266" selection-start-column="27" selection-end-line="266" selection-end-column="27" />
           <folding />
         </state>
       </provider>

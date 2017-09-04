@@ -75,7 +75,7 @@ window.onload = function () {
 
         var mealHtml = "<td class='meal-cell " + getClassForSelectedCell(currentDay) + "'><div class='cellDataContainer'>";
 
-        if (wasEaten === "true") {
+        if (wasEaten === true) {
             mealHtml += "<img class='was-eaten' src='./images/mealEaten.png' alt='tick'>";
         }
         mealHtml += "<span class='cellDataMeal'>" + mealName + "</span>";
@@ -113,13 +113,13 @@ window.onload = function () {
             var dailyWorkout = mealPlan[i];
             if(dailyWorkout.dietType !== guiltFree){
                 var classForSelectedCell = getClassForSelectedCell(dailyWorkout.day);
-                if(dailyWorkout.workoutToDo === "true" && dailyWorkout.workoutDone === "true") {
+                if(dailyWorkout.workoutToDo === true && dailyWorkout.workoutDone === true) {
                     workout +=
                         "<td class='workoutToDo " + classForSelectedCell +  "'>" +
                         "<img src='./images/workoutDone.png' alt='workoutDone'>" +
                         "<img class='workoutDone' src='./images/workoutDoneTick.png' alt='tick'>" +
                         "</td>";
-                } else if (dailyWorkout.workoutToDo === "true" && dailyWorkout.workoutDone === "false") {
+                } else if (dailyWorkout.workoutToDo === true && dailyWorkout.workoutDone === false) {
                     workout +=
                         "<td class='workoutToDo " + classForSelectedCell + "'>" +
                         "<img src='./images/workout.png' alt='workoutToDo'>" +
@@ -187,88 +187,89 @@ var mealPlan = [
     {
         "day": 1,
         "dietType": "LOW-CARB",
-        "workoutToDo": "true",
-        "workoutDone": "true",
+        "workoutToDo": true,
+        "workoutDone": true,
         "meals": [
-            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": "true" },
-            { "mealNumber": 1, "mealId": 2, "meal": "Ham and Swiss Roll Ups ", "eaten": "true" },
-            { "mealNumber": 2, "mealId": 3, "meal": "Turkey Melt", "eaten": "true" },
-            { "mealNumber": 3, "mealId": 4, "meal": "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten": "true" },
-            { "mealNumber": 4, "mealId": 5, "meal": "Turkey Melt", "eaten": "false" }
+            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": true },
+            { "mealNumber": 1, "mealId": 2, "meal": "Ham and Swiss Roll Ups ", "eaten": true },
+            { "mealNumber": 2, "mealId": 3, "meal": "Turkey Melt", "eaten": true },
+            { "mealNumber": 3, "mealId": 4, "meal": "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten": true },
+            { "mealNumber": 4, "mealId": 5, "meal": "Turkey Melt", "eaten": false }
         ]
     },
     {
         "day": 2,
         "dietType": "LOW-CARB",
-        "workoutToDo": "true",
-        "workoutDone": "true",
+        "workoutToDo": true,
+        "workoutDone": true,
         "meals": [
-            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": "false" },
-            { "mealNumber": 1, "mealId": 2, "meal": "Ham and Swiss Roll Ups ", "eaten": "false" },
-            { "mealNumber": 2, "mealId": 3, "meal": "Turkey Melt", "eaten": "false" },
-            { "mealNumber": 3, "mealId": 4, "meal": "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten": "false" },
-            { "mealNumber": 4, "mealId": 3, "meal": "Turkey Melt", "eaten": "false" }
+            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": false },
+            { "mealNumber": 1, "mealId": 2, "meal": "Ham and Swiss Roll Ups ", "eaten": false },
+            { "mealNumber": 2, "mealId": 3, "meal": "Turkey Melt", "eaten": false },
+            { "mealNumber": 3, "mealId": 4, "meal": "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten": false },
+            { "mealNumber": 4, "mealId": 3, "meal": "Turkey Melt", "eaten": false }
         ]
     },
     {
         "day": 3,
         "dietType": "HIGH-CARB",
-        "workoutToDo": "true",
-        "workoutDone": "false",
+        "workoutToDo": true,
+        "workoutDone": false,
         "meals": [
-            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": "false" },
-            { "mealNumber": 1, "mealId": 5, "meal": "Grilled Steak (HC)", "eaten": "false" },
-            { "mealNumber": 2, "mealId": 1, "meal": "Bod•ē Shake", "eaten": "false" },
-            { "mealNumber": 3, "mealId": 6, "meal": "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray ", "eaten": "false" },
-            { "mealNumber": 4, "mealId": 7, "meal": "Garlic Lime Chicken (HC)", "eaten": "false" }
+            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": false },
+            { "mealNumber": 1, "mealId": 5, "meal": "Grilled Steak (HC)", "eaten": false },
+            { "mealNumber": 2, "mealId": 1, "meal": "Bod•ē Shake", "eaten": false },
+            { "mealNumber": 3, "mealId": 6, "meal": "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray ", "eaten": false },
+            { "mealNumber": 4, "mealId": 7, "meal": "Garlic Lime Chicken (HC)", "eaten": false }
         ]
     },
     {
         "day": 4,
         "dietType": "LOW-CARB",
-        "workoutToDo": "true",
-        "workoutDone": "false",
+        "workoutToDo": true,
+        "workoutDone": false,
         "meals": [
-            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": "false" },
-            { "mealNumber": 1, "mealId": 2, "meal": "Ham and Swiss Roll Ups ", "eaten": "false" },
-            { "mealNumber": 2, "mealId": 3, "meal": "Turkey Melt", "eaten": "false" },
-            { "mealNumber": 3, "mealId": 4, "meal": "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten": "false" },
-            { "mealNumber": 4, "mealId": 5, "meal": "Turkey Melt", "eaten": "false" }
+            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": false },
+            { "mealNumber": 1, "mealId": 2, "meal": "Ham and Swiss Roll Ups ", "eaten": false },
+            { "mealNumber": 2, "mealId": 3, "meal": "Turkey Melt", "eaten": false },
+            { "mealNumber": 3, "mealId": 4, "meal": "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten": false },
+            { "mealNumber": 4, "mealId": 5, "meal": "Turkey Melt", "eaten": false }
         ]
     },
     {
         "day": 5,
         "dietType": "LOW-CARB",
-        "workoutToDo": "true",
-        "workoutDone": "false",
+        "workoutToDo": true,
+        "workoutDone": false,
         "meals": [
-            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": "false" },
-            { "mealNumber": 1, "mealId": 2, "meal": "Ham and Swiss Roll Ups ", "eaten": "false" },
-            { "mealNumber": 2, "mealId": 3, "meal": "Turkey Melt", "eaten": "false" },
-            { "mealNumber": 3, "mealId": 4, "meal": "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten": "false" },
-            { "mealNumber": 4, "mealId": 5, "meal": "Turkey Melt", "eaten": "false" }
+            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": false },
+            { "mealNumber": 1, "mealId": 2, "meal": "Ham and Swiss Roll Ups ", "eaten": false },
+            { "mealNumber": 2, "mealId": 3, "meal": "Turkey Melt", "eaten": false },
+            { "mealNumber": 3, "mealId": 4, "meal": "Bod•ē Burn with Mozzarella and Tomato Slices ", "eaten": false },
+            { "mealNumber": 4, "mealId": 5, "meal": "Turkey Melt", "eaten": false }
         ]
     },
     {
         "day": 6,
         "dietType": "HIGH-CARB",
-        "workoutToDo": "true",
-        "workoutDone": "false",
+        "workoutToDo": true,
+        "workoutDone": false,
         "meals": [
-            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": "false" },
-            { "mealNumber": 1, "mealId": 5, "meal": "Grilled Steak (HC)", "eaten": "false" },
-            { "mealNumber": 2, "mealId": 1, "meal": "Bod•ē Shake", "eaten": "false" },
-            { "mealNumber": 3, "mealId": 6, "meal": "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray ", "eaten": "false" },
-            { "mealNumber": 4, "mealId": 7, "meal": "Garlic Lime Chicken (HC)", "eaten": "false" }
+            { "mealNumber": 0, "mealId": 1, "meal": "Bod•ē Shake", "eaten": false },
+            { "mealNumber": 1, "mealId": 5, "meal": "Grilled Steak (HC)", "eaten": false },
+            { "mealNumber": 2, "mealId": 1, "meal": "Bod•ē Shake", "eaten": false },
+            { "mealNumber": 3, "mealId": 6, "meal": "Bod•ē Burn and Whole-Wheat English Muffin with Butter Spray ", "eaten": false },
+            { "mealNumber": 4, "mealId": 7, "meal": "Garlic Lime Chicken (HC)", "eaten": false }
         ]
     },
     {
         "day": 7,
-        "workoutToDo": "false",
-        "workoutDone": "false",
+        "workoutToDo": false,
+        "workoutDone": false,
         "dietType": "GUILT FREE",
         "meals": []
-    }
+    },
+
 ];
 
 var mealHours = [
